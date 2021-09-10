@@ -1,0 +1,11 @@
+Feature Family,Feature Name,Family Abbreviation,Aggregation Abbreviation,Dimension,IBSI Family code,IBSI Feature code,IBSI Aggregation code,RaCaT Feature/Family Description,FixedBin,PET_unit,CT_unit,MRI_unit
+morphology,area,MORPH,--,2D,HCUG,--,DHQ4,Morphology,--,mm^2,mm^2,mm^2
+morphology,perimeter,MORPH,--,2D,HCUG,--,DHQ4,Morphology,--,mm,mm,mm
+morphology,perimeter to area ratio,MORPH,--,2D,HCUG,--,DHQ4,Morphology,--,--,--,--
+morphology,compactness,MORPH,--,2D,HCUG,--,DHQ4,Morphology,--,--,--,--
+morphology,circularity,MORPH,--,2D,HCUG,--,DHQ4,Morphology,--,--,--,--
+morphology,acircularity,MORPH,--,2D,HCUG,--,DHQ4,Morphology,--,--,--,--
+morphology,center of mass shift,MORPH,--,2D,HCUG,--,DHQ4,Morphology,--,mm,mm,mm
+morphology,maximum diameter,MORPH,--,2D,HCUG,--,DHQ4,Morphology,--,mm,mm,mm
+morphology,area density aabb,MORPH,--,2D,HCUG,--,DHQ4,Morphology,--,--,--,--
+morphology,perimeter density aabb,MORPH,--,2D,HCUG,--,DHQ4,Morphology,--,--,--,--

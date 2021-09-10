@@ -1,0 +1,122 @@
+Feature Family,Feature Name,Family Abbreviation,Aggregation Abbreviation,Dimension,IBSI Family code,IBSI Feature code,IBSI Aggregation code,Family Description,FixedBin,PET_unit,CT_unit,MRI_unit,tool_names
+morphology,area,MORPH,--,2D,HCUG,--,DHQ4,Morphology,--,mm^2,mm^2,mm^2,--
+morphology,perimeter,MORPH,--,2D,HCUG,--,DHQ4,Morphology,--,mm,mm,mm,--
+morphology,perimeter to area ratio,MORPH,--,2D,HCUG,--,DHQ4,Morphology,--,mm^-1,mm^-1,mm^-1,--
+morphology,compactness,MORPH,--,2D,HCUG,--,DHQ4,Morphology,--,--,--,--,--
+morphology,circularity,MORPH,--,2D,HCUG,--,DHQ4,Morphology,--,--,--,--,--
+morphology,acircularity,MORPH,--,2D,HCUG,--,DHQ4,Morphology,--,--,--,--,--
+morphology,center of mass shift,MORPH,--,2D,HCUG,--,DHQ4,Morphology,--,mm,mm,mm,--
+morphology,maximum diameter,MORPH,--,2D,HCUG,--,DHQ4,Morphology,--,mm,mm,mm,--
+morphology,area density aabb,MORPH,--,2D,HCUG,--,DHQ4,Morphology,--,--,--,--,--
+morphology,perimeter density aabb,MORPH,--,2D,HCUG,--,DHQ4,Morphology,--,--,--,--,--
+intensity-based statistics,mean,STAT,--,2D,UHIW,--,DHQ4,Statistics,--,g/mm^3,Hu,--,Fstat_mean
+intensity-based statistics,variance,STAT,--,2D,UHIW,--,DHQ4,Statistics,--,(g/mm^3)^2,Hu^2,--,Fstat_var
+intensity-based statistics,skewness,STAT,--,2D,UHIW,--,DHQ4,Statistics,--,--,--,--,Fstat_skew
+intensity-based statistics,kurtosis,STAT,--,2D,UHIW,--,DHQ4,Statistics,--,--,--,--,Fstat_kurt
+intensity-based statistics,median,STAT,--,2D,UHIW,--,DHQ4,Statistics,--,g/mm^3,Hu,--,Fstat_median
+intensity-based statistics,minimum,STAT,--,2D,UHIW,--,DHQ4,Statistics,--,g/mm^3,Hu,--,Fstat_min
+intensity-based statistics,10th percentile,STAT,--,2D,UHIW,--,DHQ4,Statistics,--,g/mm^3,Hu,--,Fstat_P10
+intensity-based statistics,90th percentile,STAT,--,2D,UHIW,--,DHQ4,Statistics,--,g/mm^3,Hu,--,Fstat_P90
+intensity-based statistics,maximum,STAT,--,2D,UHIW,--,DHQ4,Statistics,--,g/mm^3,Hu,--,Fstat_max
+intensity-based statistics,Interquartile range,STAT,--,2D,UHIW,--,DHQ4,Statistics,--,g/mm^3,Hu,--,Fstat_iqr
+intensity-based statistics,range,STAT,--,2D,UHIW,--,DHQ4,Statistics,--,g/mm^3,Hu,--,Fstat_range
+intensity-based statistics,Mean absolut deviation,STAT,--,2D,UHIW,--,DHQ4,Statistics,--,g/mm^3,Hu,--,Fstat_mad
+intensity-based statistics,Robust mean absolute deviation,STAT,--,2D,UHIW,--,DHQ4,Statistics,--,g/mm^3,Hu,--,Fstat_rmad
+intensity-based statistics,Median absolute deviation,STAT,--,2D,UHIW,--,DHQ4,Statistics,--,g/mm^3,Hu,--,Fstat_medad
+intensity-based statistics,Coefficient of variation,STAT,--,2D,UHIW,--,DHQ4,Statistics,--,--,--,--,Fstat_cov
+intensity-based statistics,Quartile coefficient,STAT,--,2D,UHIW,--,DHQ4,Statistics,--,--,--,--,Fstat_qcod
+intensity-based statistics,Energy,STAT,--,2D,UHIW,--,DHQ4,Statistics,--,(g/mm^3)^2,Hu^2,--,Fstat_energy
+intensity-based statistics,Root mean,STAT,--,2D,UHIW,--,DHQ4,Statistics,--,g/mm^3,Hu,--,Fstat_rms
+intensity histogram,mean,IH,--,2D,ZVCW,--,DHQ4,Intensity histogram,FB,--,--,--,Fih_mean
+intensity histogram,variance,IH,--,2D,ZVCW,--,DHQ4,Intensity histogram,FB,--,--,--,Fih_var
+intensity histogram,skewness,IH,--,2D,ZVCW,--,DHQ4,Intensity histogram,FB,--,--,--,Fih_skew
+intensity histogram,kurtosis,IH,--,2D,ZVCW,--,DHQ4,Intensity histogram,FB,--,--,--,Fih_kurt
+intensity histogram,median,IH,--,2D,ZVCW,--,DHQ4,Intensity histogram,FB,--,--,--,Fih_median
+intensity histogram,10th percentile,IH,--,2D,ZVCW,--,DHQ4,Intensity histogram,FB,--,--,--,Fih_P10
+intensity histogram,90th percentile,IH,--,2D,ZVCW,--,DHQ4,Intensity histogram,FB,--,--,--,Fih_P90
+intensity histogram,maximum,IH,--,2D,ZVCW,--,DHQ4,Intensity histogram,FB,--,--,--,Fih_max
+intensity histogram,range,IH,--,2D,ZVCW,--,DHQ4,Intensity histogram,FB,--,--,--,Fih_range
+intensity histogram,mean absolut deviation,IH,--,2D,ZVCW,--,DHQ4,Intensity histogram,FB,--,--,--,Fih_mad
+intensity histogram,robust mean absolute deviation,IH,--,2D,ZVCW,--,DHQ4,Intensity histogram,FB,--,--,--,Fih_rmad
+intensity histogram,median absolut deviation,IH,--,2D,ZVCW,--,DHQ4,Intensity histogram,FB,--,--,--,Fih_medad
+intensity histogram,coefficient of variation,IH,--,2D,ZVCW,--,DHQ4,Intensity histogram,FB,--,--,--,Fih_cov
+intensity histogram,entropy,IH,--,2D,ZVCW,--,DHQ4,Intensity histogram,FB,--,--,--,Fih_entropy
+intensity histogram,uniformity,IH,--,2D,ZVCW,--,DHQ4,Intensity histogram,FB,--,--,--,Fih_uniformity
+intensity histogram,minimum histogram gradient,IH,--,2D,ZVCW,--,DHQ4,Intensity histogram,FB,--,--,--,Fih_min_grad
+grey-level co-occurrence matrix,joint maximum,CM,2D:mrg,2D,LFYI,--,SUJT,glcmFeatures2Dmrg,FBT,--,--,--,Fcm_joint_max
+grey-level co-occurrence matrix,joint average,CM,2D:mrg,2D,LFYI,--,SUJT,glcmFeatures2Dmrg,FBT,--,--,--,Fcm_joint_avg
+grey-level co-occurrence matrix,joint variance,CM,2D:mrg,2D,LFYI,--,SUJT,glcmFeatures2Dmrg,FBT,--,--,--,Fcm_joint_var
+grey-level co-occurrence matrix,joint entropy,CM,2D:mrg,2D,LFYI,--,SUJT,glcmFeatures2Dmrg,FBT,--,--,--,Fcm_joint_entr
+grey-level co-occurrence matrix,difference average,CM,2D:mrg,2D,LFYI,--,SUJT,glcmFeatures2Dmrg,FBT,--,--,--,Fcm_diff_avg
+grey-level co-occurrence matrix,difference variance,CM,2D:mrg,2D,LFYI,--,SUJT,glcmFeatures2Dmrg,FBT,--,--,--,Fcm_diff_var
+grey-level co-occurrence matrix,difference entropy,CM,2D:mrg,2D,LFYI,--,SUJT,glcmFeatures2Dmrg,FBT,--,--,--,Fcm_diff_entr
+grey-level co-occurrence matrix,sum average,CM,2D:mrg,2D,LFYI,--,SUJT,glcmFeatures2Dmrg,FBT,--,--,--,Fcm_sum_avg
+grey-level co-occurrence matrix,sum variance,CM,2D:mrg,2D,LFYI,--,SUJT,glcmFeatures2Dmrg,FBT,--,--,--,Fcm_sum_var
+grey-level co-occurrence matrix,sum entropy,CM,2D:mrg,2D,LFYI,--,SUJT,glcmFeatures2Dmrg,FBT,--,--,--,Fcm_sum_entr
+grey-level co-occurrence matrix,angular second moment,CM,2D:mrg,2D,LFYI,--,SUJT,glcmFeatures2Dmrg,FBT,--,--,--,Fcm_energy
+grey-level co-occurrence matrix,contrast,CM,2D:mrg,2D,LFYI,--,SUJT,glcmFeatures2Dmrg,FBT,--,--,--,Fcm_contrast
+grey-level co-occurrence matrix,dissimilarity,CM,2D:mrg,2D,LFYI,--,SUJT,glcmFeatures2Dmrg,FBT,--,--,--,Fcm_dissimilarity
+grey-level co-occurrence matrix,inverse difference,CM,2D:mrg,2D,LFYI,--,SUJT,glcmFeatures2Dmrg,FBT,--,--,--,Fcm_inv_diff
+grey-level co-occurrence matrix,inverse difference normalised,CM,2D:mrg,2D,LFYI,--,SUJT,glcmFeatures2Dmrg,FBT,--,--,--,Fcm_inv_diff_norm
+grey-level co-occurrence matrix,inverse difference moment,CM,2D:mrg,2D,LFYI,--,SUJT,glcmFeatures2Dmrg,FBT,--,--,--,Fcm_inv_diff_mom
+grey-level co-occurrence matrix,inverse difference moment normalised,CM,2D:mrg,2D,LFYI,--,SUJT,glcmFeatures2Dmrg,FBT,--,--,--,Fcm_inv_diff_mom_norm
+grey-level co-occurrence matrix,inverse variance,CM,2D:mrg,2D,LFYI,--,SUJT,glcmFeatures2Dmrg,FBT,--,--,--,Fcm_inv_var
+grey-level co-occurrence matrix,correlation,CM,2D:mrg,2D,LFYI,--,SUJT,glcmFeatures2Dmrg,FBT,--,--,--,Fcm_corr
+grey-level co-occurrence matrix,autocorrelation,CM,2D:mrg,2D,LFYI,--,SUJT,glcmFeatures2Dmrg,FBT,--,--,--,Fcm_auto_corr
+grey-level co-occurrence matrix,cluster tendency,CM,2D:mrg,2D,LFYI,--,SUJT,glcmFeatures2Dmrg,FBT,--,--,--,Fcm_clust_tend
+grey-level co-occurrence matrix,cluster shade,CM,2D:mrg,2D,LFYI,--,SUJT,glcmFeatures2Dmrg,FBT,--,--,--,Fcm_clust_shade
+grey-level co-occurrence matrix,cluster prominence,CM,2D:mrg,2D,LFYI,--,SUJT,glcmFeatures2Dmrg,FBT,--,--,--,Fcm_clust_prom
+grey-level co-occurrence matrix,first measure of information correlation,CM,2D:mrg,2D,LFYI,--,SUJT,glcmFeatures2Dmrg,FBT,--,--,--,Fcm_info_corr_1
+grey-level co-occurrence matrix,second measure of information correlation,CM,2D:mrg,2D,LFYI,--,SUJT,glcmFeatures2Dmrg,FBT,--,--,--,Fcm_info_corr_2
+grey-level run length matrix,short run emphasis,RLM,2D:smrg,2D,TP0I,--,SUJT,GLRLMFeatures2DSmrg,FBT,--,--,--,Frlm_sre
+grey-level run length matrix,long runs emphasis,RLM,2D:smrg,2D,TP0I,--,SUJT,GLRLMFeatures2DSmrg,FBT,--,--,--,Frlm_lre
+grey-level run length matrix,Low grey level run emphasis,RLM,2D:smrg,2D,TP0I,--,SUJT,GLRLMFeatures2DSmrg,FBT,--,--,--,Frlm_lgre
+grey-level run length matrix,High grey level run emphasis,RLM,2D:smrg,2D,TP0I,--,SUJT,GLRLMFeatures2DSmrg,FBT,--,--,--,Frlm_hgre
+grey-level run length matrix,Short run low grey level emphasis,RLM,2D:smrg,2D,TP0I,--,SUJT,GLRLMFeatures2DSmrg,FBT,--,--,--,Frlm_srlge
+grey-level run length matrix,Short run high grey level emphasis,RLM,2D:smrg,2D,TP0I,--,SUJT,GLRLMFeatures2DSmrg,FBT,--,--,--,Frlm_srhge
+grey-level run length matrix,Long run low grey level emphasis,RLM,2D:smrg,2D,TP0I,--,SUJT,GLRLMFeatures2DSmrg,FBT,--,--,--,Frlm_lrlge
+grey-level run length matrix,Long run high grey level emphasis,RLM,2D:smrg,2D,TP0I,--,SUJT,GLRLMFeatures2DSmrg,FBT,--,--,--,Frlm_lrhge
+grey-level run length matrix,Grey level non uniformity,RLM,2D:smrg,2D,TP0I,--,SUJT,GLRLMFeatures2DSmrg,FBT,--,--,--,Frlm_glnu
+grey-level run length matrix,Grey level non uniformity normalized,RLM,2D:smrg,2D,TP0I,--,SUJT,GLRLMFeatures2DSmrg,FBT,--,--,--,Frlm_glnu_norm
+grey-level run length matrix,Run length non uniformity,RLM,2D:smrg,2D,TP0I,--,SUJT,GLRLMFeatures2DSmrg,FBT,--,--,--,Frlm_rlnu
+grey-level run length matrix,Run length non uniformity normalized,RLM,2D:smrg,2D,TP0I,--,SUJT,GLRLMFeatures2DSmrg,FBT,--,--,--,Frlm_rlnu_norm
+grey-level run length matrix,Run percentage,RLM,2D:smrg,2D,TP0I,--,SUJT,GLRLMFeatures2DSmrg,FBT,--,--,--,Frlm_r_perc
+grey-level run length matrix,Grey level variance,RLM,2D:smrg,2D,TP0I,--,SUJT,GLRLMFeatures2DSmrg,FBT,--,--,--,Frlm_gl_var
+grey-level run length matrix,Run length variance,RLM,2D:smrg,2D,TP0I,--,SUJT,GLRLMFeatures2DSmrg,FBT,--,--,--,Frlm_rl_var
+grey-level run length matrix,Run entropy,RLM,2D:smrg,2D,TP0I,--,SUJT,GLRLMFeatures2DSmrg,FBT,--,--,--,Frlm_rl_entr
+grey-level size zone matrix,small zone emphasis,SZM,2D,2D,9SAK,--,8QNN,GLSZMFeatures2D,FBT,--,--,--,Fszm_sze
+grey-level size zone matrix,large zone emphasis,SZM,2D,2D,9SAK,--,8QNN,GLSZMFeatures2D,FBT,--,--,--,Fszm_lze
+grey-level size zone matrix,low grey level zone emphasis,SZM,2D,2D,9SAK,--,8QNN,GLSZMFeatures2D,FBT,--,--,--,Fszm_lgze
+grey-level size zone matrix,high grey level zone emphasis,SZM,2D,2D,9SAK,--,8QNN,GLSZMFeatures2D,FBT,--,--,--,Fszm_hgze
+grey-level size zone matrix,small zone low grey level emphasis,SZM,2D,2D,9SAK,--,8QNN,GLSZMFeatures2D,FBT,--,--,--,Fszm_szlge
+grey-level size zone matrix,small zone high grey level emphasis,SZM,2D,2D,9SAK,--,8QNN,GLSZMFeatures2D,FBT,--,--,--,Fszm_szhge
+grey-level size zone matrix,large zone high grey level emphasis,SZM,2D,2D,9SAK,--,8QNN,GLSZMFeatures2D,FBT,--,--,--,Fszm_lzlge
+grey-level size zone matrix,grey level non uniformity glszm,SZM,2D,2D,9SAK,--,8QNN,GLSZMFeatures2D,FBT,--,--,--,Fszm_glnu
+grey-level size zone matrix,grey level non uniformity normalized glszm,SZM,2D,2D,9SAK,--,8QNN,GLSZMFeatures2D,FBT,--,--,--,Fszm_glnu_norm
+grey-level size zone matrix,zone size non uniformity,SZM,2D,2D,9SAK,--,8QNN,GLSZMFeatures2D,FBT,--,--,--,Fszm_zsnu
+grey-level size zone matrix,zone size non uniformity normalized,SZM,2D,2D,9SAK,--,8QNN,GLSZMFeatures2D,FBT,--,--,--,Fszm_zsnu_norm
+grey-level size zone matrix,zone percentage glszm,SZM,2D,2D,9SAK,--,8QNN,GLSZMFeatures2D,FBT,--,--,--,Fszm_z_perc
+grey-level size zone matrix,grey level variance glszm,SZM,2D,2D,9SAK,--,8QNN,GLSZMFeatures2D,FBT,--,--,--,Fszm_lzhge
+grey-level size zone matrix,zone size variance,SZM,2D,2D,9SAK,--,8QNN,GLSZMFeatures2D,FBT,--,--,--,Fszm_zs_var
+grey-level size zone matrix,zone size entropy,SZM,2D,2D,9SAK,--,8QNN,GLSZMFeatures2D,FBT,--,--,--,Fszm_zs_entr
+neighbourhood grey tone difference matrix,coarseness,TDM,2D,2D,IPET,--,8QNN,ngtdmFeatures2avg,FBT,--,--,--,Fngt_coarseness
+neighbourhood grey tone difference matrix,contrast,TDM,2D,2D,IPET,--,8QNN,ngtdmFeatures2avg,FBT,--,--,--,Fngt_contrast
+neighbourhood grey tone difference matrix,busyness,TDM,2D,2D,IPET,--,8QNN,ngtdmFeatures2avg,FBT,--,--,--,Fngt_busyness
+neighbourhood grey tone difference matrix,complexity,TDM,2D,2D,IPET,--,8QNN,ngtdmFeatures2avg,FBT,--,--,--,Fngt_complexity
+neighbourhood grey tone difference matrix,strength,TDM,2D,2D,IPET,--,8QNN,ngtdmFeatures2avg,FBT,--,--,--,Fngt_strength
+neighbouring grey level dependence matrix,low dependence emphasis,LDM,2D,2D,REK0,--,8QNN,ngldmFeatures2D,FBT,--,--,--,Fngl_lde
+neighbouring grey level dependence matrix,high dependence emphasis,LDM,2D,2D,REK0,--,8QNN,ngldmFeatures2D,FBT,--,--,--,Fngl_hde
+neighbouring grey level dependence matrix,low grey level count emphasis,LDM,2D,2D,REK0,--,8QNN,ngldmFeatures2D,FBT,--,--,--,Fngl_lgce
+neighbouring grey level dependence matrix,high grey level count emphasis,LDM,2D,2D,REK0,--,8QNN,ngldmFeatures2D,FBT,--,--,--,Fngl_hgce
+neighbouring grey level dependence matrix,low dependence low grey level emphasis,LDM,2D,2D,REK0,--,8QNN,ngldmFeatures2D,FBT,--,--,--,Fngl_ldlge
+neighbouring grey level dependence matrix,low dependence high grey level emphasis,LDM,2D,2D,REK0,--,8QNN,ngldmFeatures2D,FBT,--,--,--,Fngl_ldhge
+neighbouring grey level dependence matrix,high dependence low grey level emphasis,LDM,2D,2D,REK0,--,8QNN,ngldmFeatures2D,FBT,--,--,--,Fngl_hdlge
+neighbouring grey level dependence matrix,high dependence high grey level emphasis,LDM,2D,2D,REK0,--,8QNN,ngldmFeatures2D,FBT,--,--,--,Fngl_hdhge
+neighbouring grey level dependence matrix,grey level non uniformity,LDM,2D,2D,REK0,--,8QNN,ngldmFeatures2D,FBT,--,--,--,Fngl_glnu
+neighbouring grey level dependence matrix,grey level non uniformity normalized,LDM,2D,2D,REK0,--,8QNN,ngldmFeatures2D,FBT,--,--,--,Fngl_glnu_norm
+neighbouring grey level dependence matrix,dependence count non uniformity,LDM,2D,2D,REK0,--,8QNN,ngldmFeatures2D,FBT,--,--,--,Fngl_dcnu
+neighbouring grey level dependence matrix,dependence count non uniformity normalized,LDM,2D,2D,REK0,--,8QNN,ngldmFeatures2D,FBT,--,--,--,Fngl_dcnu_norm
+neighbouring grey level dependence matrix,grey level variance,LDM,2D,2D,REK0,--,8QNN,ngldmFeatures2D,FBT,--,--,--,Fngl_gl_var
+neighbouring grey level dependence matrix,dependence count variance,LDM,2D,2D,REK0,--,8QNN,ngldmFeatures2D,FBT,--,--,--,Fngl_dc_var
+neighbouring grey level dependence matrix,dependence count entropy,LDM,2D,2D,REK0,--,8QNN,ngldmFeatures2D,FBT,--,--,--,Fngl_dc_entr
+neighbouring grey level dependence matrix,dependence count energy,LDM,2D,2D,REK0,--,8QNN,ngldmFeatures2D,FBT,--,--,--,Fngl_dc_energy

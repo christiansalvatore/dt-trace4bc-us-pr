@@ -1,0 +1,483 @@
+Feature Family,Feature Name,Family Abbreviation,Aggregation Abbreviation,Dimension,IBSI Family code,IBSI Feature code,IBSI Aggregation code,RaCaT Feature/Family Description,FixedBin,PET_unit,CT_unit,MRI_unit
+morphology,volume,MORPH,--,3D,HCUG,--,DHQ4,Morphology,--,mm^3,mm^3,mm^3
+morphology,approximate volume,MORPH,--,3D,HCUG,--,DHQ4,Morphology,--,mm^3,mm^3,mm^3
+morphology,surface,MORPH,--,3D,HCUG,--,DHQ4,Morphology,--,mm^2,mm^2,mm^2
+morphology,surface to volume ratio,MORPH,--,3D,HCUG,--,DHQ4,Morphology,--,mm^2,mm^2,mm^2
+morphology,compactness1,MORPH,--,3D,HCUG,--,DHQ4,Morphology,--,--,--,--
+morphology,compactness2,MORPH,--,3D,HCUG,--,DHQ4,Morphology,--,--,--,--
+morphology,spherical disproportion,MORPH,--,3D,HCUG,--,DHQ4,Morphology,--,--,--,--
+morphology,sphericity,MORPH,--,3D,HCUG,--,DHQ4,Morphology,--,--,--,--
+morphology,asphericity,MORPH,--,3D,HCUG,--,DHQ4,Morphology,--,--,--,--
+morphology,center of mass shift,MORPH,--,3D,HCUG,--,DHQ4,Morphology,--,mm,mm,mm
+morphology,maximum 3d diameter,MORPH,--,3D,HCUG,--,DHQ4,Morphology,--,mm,mm,mm
+morphology,major axis length,MORPH,--,3D,HCUG,--,DHQ4,Morphology,--,mm,mm,mm
+morphology,minor axis length,MORPH,--,3D,HCUG,--,DHQ4,Morphology,--,mm,mm,mm
+morphology,least axis length,MORPH,--,3D,HCUG,--,DHQ4,Morphology,--,mm,mm,mm
+morphology,elongation,MORPH,--,3D,HCUG,--,DHQ4,Morphology,--,--,--,--
+morphology,flatness,MORPH,--,3D,HCUG,--,DHQ4,Morphology,--,--,--,--
+morphology,vol density aabb,MORPH,--,3D,HCUG,--,DHQ4,Morphology,--,--,--,--
+morphology,area density aabb,MORPH,--,3D,HCUG,--,DHQ4,Morphology,--,--,--,--
+morphology,vol density ombb,MORPH,,3D,HCUG,--,DHQ4,Morphology,--,--,--,--
+morphology,area density ombb,MORPH,,3D,HCUG,--,DHQ4,Morphology,--,--,--,--
+morphology,vol density aee,MORPH,--,3D,HCUG,--,DHQ4,Morphology,--,--,--,--
+morphology,integrated intensity,MORPH,--,3D,HCUG,--,DHQ4,Morphology,--,g,Hu*mm^3,--
+morphology,morans i,MORPH,--,3D,HCUG,--,DHQ4,Morphology,--,--,--,--
+morphology,gearys c,MORPH,--,3D,HCUG,--,DHQ4,Morphology,--,--,--,--
+local intensity,local intensity peak,LI,--,3D,9ST6,--,DHQ4,Local intensity,--,g/mm^3,Hu,--
+local intensity,global intensity peak,LI,--,3D,9ST6,--,DHQ4,Local intensity,--,g/mm^3,Hu,--
+intensity-based statistics,mean,STAT,--,3D,UHIW,--,DHQ4,Statistics,--,g/mm^3,Hu,--
+intensity-based statistics,variance,STAT,--,3D,UHIW,--,DHQ4,Statistics,--,(g/mm^3)^2,Hu^2,--
+intensity-based statistics,skewness,STAT,--,3D,UHIW,--,DHQ4,Statistics,--,--,--,--
+intensity-based statistics,kurtosis,STAT,--,3D,UHIW,--,DHQ4,Statistics,--,--,--,--
+intensity-based statistics,median,STAT,--,3D,UHIW,--,DHQ4,Statistics,--,g/mm^3,Hu,--
+intensity-based statistics,minimum,STAT,--,3D,UHIW,--,DHQ4,Statistics,--,g/mm^3,Hu,--
+intensity-based statistics,10th percentile,STAT,--,3D,UHIW,--,DHQ4,Statistics,--,g/mm^3,Hu,--
+intensity-based statistics,90th percentile,STAT,--,3D,UHIW,--,DHQ4,Statistics,--,g/mm^3,Hu,--
+intensity-based statistics,maximum,STAT,--,3D,UHIW,--,DHQ4,Statistics,--,g/mm^3,Hu,--
+intensity-based statistics,Interquartile range,STAT,--,3D,UHIW,--,DHQ4,Statistics,--,g/mm^3,Hu,--
+intensity-based statistics,range,STAT,--,3D,UHIW,--,DHQ4,Statistics,--,g/mm^3,Hu,--
+intensity-based statistics,Mean absolut deviation,STAT,--,3D,UHIW,--,DHQ4,Statistics,--,g/mm^3,Hu,--
+intensity-based statistics,Robust mean absolute deviation,STAT,--,3D,UHIW,--,DHQ4,Statistics,--,g/mm^3,Hu,--
+intensity-based statistics,Median absolute deviation,STAT,--,3D,UHIW,--,DHQ4,Statistics,--,g/mm^3,Hu,--
+intensity-based statistics,Coefficient of variation,STAT,--,3D,UHIW,--,DHQ4,Statistics,--,--,--,--
+intensity-based statistics,Quartile coefficient,STAT,--,3D,UHIW,--,DHQ4,Statistics,--,--,--,--
+intensity-based statistics,Energy,STAT,--,3D,UHIW,--,DHQ4,Statistics,--,(g/mm^3)^2,Hu^2,--
+intensity-based statistics,Root mean,STAT,--,3D,UHIW,--,DHQ4,Statistics,--,g/mm^3,Hu,--
+intensity histogram,mean,IH,--,3D,ZVCW,--,DHQ4,Intensity histogram,FB,--,--,--
+intensity histogram,variance,IH,--,3D,ZVCW,--,DHQ4,Intensity histogram,FB,--,--,--
+intensity histogram,skewness,IH,--,3D,ZVCW,--,DHQ4,Intensity histogram,FB,--,--,--
+intensity histogram,kurtosis,IH,--,3D,ZVCW,--,DHQ4,Intensity histogram,FB,--,--,--
+intensity histogram,median,IH,--,3D,ZVCW,--,DHQ4,Intensity histogram,FB,--,--,--
+intensity histogram,minimum,IH,--,3D,ZVCW,--,DHQ4,Intensity histogram,FB,--,--,--
+intensity histogram,10th percentile,IH,--,3D,ZVCW,--,DHQ4,Intensity histogram,FB,--,--,--
+intensity histogram,90th percentile,IH,--,3D,ZVCW,--,DHQ4,Intensity histogram,FB,--,--,--
+intensity histogram,maximum,IH,--,3D,ZVCW,--,DHQ4,Intensity histogram,FB,--,--,--
+intensity histogram,mode,IH,--,3D,ZVCW,--,DHQ4,Intensity histogram,FB,--,--,--
+intensity histogram,interquartile range,IH,--,3D,ZVCW,--,DHQ4,Intensity histogram,FB,--,--,--
+intensity histogram,range,IH,--,3D,ZVCW,--,DHQ4,Intensity histogram,FB,--,--,--
+intensity histogram,mean absolut deviation,IH,--,3D,ZVCW,--,DHQ4,Intensity histogram,FB,--,--,--
+intensity histogram,robust mean absolute deviation,IH,--,3D,ZVCW,--,DHQ4,Intensity histogram,FB,--,--,--
+intensity histogram,median absolut deviation,IH,--,3D,ZVCW,--,DHQ4,Intensity histogram,FB,--,--,--
+intensity histogram,coefficient of variation,IH,--,3D,ZVCW,--,DHQ4,Intensity histogram,FB,--,--,--
+intensity histogram,quartile coefficient,IH,--,3D,ZVCW,--,DHQ4,Intensity histogram,FB,--,--,--
+intensity histogram,entropy,IH,--,3D,ZVCW,--,DHQ4,Intensity histogram,FB,--,--,--
+intensity histogram,uniformity,IH,--,3D,ZVCW,--,DHQ4,Intensity histogram,FB,--,--,--
+intensity histogram,energy,IH,--,3D,ZVCW,--,DHQ4,Intensity histogram,FB,--,--,--
+intensity histogram,maximum histogram gradient,IH,--,3D,ZVCW,--,DHQ4,Intensity histogram,FB,--,--,--
+intensity histogram,maximum histogram gradient grey level,IH,--,3D,ZVCW,--,DHQ4,Intensity histogram,FB,--,--,--
+intensity histogram,minimum histogram gradient,IH,--,3D,ZVCW,--,DHQ4,Intensity histogram,FB,--,--,--
+intensity histogram,minimum histogram gradient grey level,IH,--,3D,ZVCW,--,DHQ4,Intensity histogram,FB,--,--,--
+intensity-volume histogram,volume at int fraction 10,IVH,--,3D,P88C,--,DHQ4,intensity volume,FB1,--,--,--
+intensity-volume histogram,volume at int fraction 90,IVH,--,3D,P88C,--,DHQ4,intensity volume,FB1,--,--,--
+intensity-volume histogram,int at vol fraction 10,IVH,--,3D,P88C,--,DHQ4,intensity volume,FB1,--,--,--
+intensity-volume histogram,int at vol fraction 90,IVH,--,3D,P88C,--,DHQ4,intensity volume,FB1,--,--,--
+intensity-volume histogram,difference vol at int fraction,IVH,--,3D,P88C,--,DHQ4,intensity volume,FB1,--,--,--
+intensity-volume histogram,difference int at volume fraction,IVH,--,3D,P88C,--,DHQ4,intensity volume,FB1,--,--,--
+grey-level co-occurrence matrix,joint maximum,CM,2D:avg,2D,LFYI,--,BTW3,glcmFeatures2Davg,FB,--,--,--
+grey-level co-occurrence matrix,joint average,CM,2D:avg,2D,LFYI,--,BTW3,glcmFeatures2Davg,FB,--,--,--
+grey-level co-occurrence matrix,joint variance,CM,2D:avg,2D,LFYI,--,BTW3,glcmFeatures2Davg,FB,--,--,--
+grey-level co-occurrence matrix,joint entropy,CM,2D:avg,2D,LFYI,--,BTW3,glcmFeatures2Davg,FB,--,--,--
+grey-level co-occurrence matrix,difference average,CM,2D:avg,2D,LFYI,--,BTW3,glcmFeatures2Davg,FB,--,--,--
+grey-level co-occurrence matrix,difference variance,CM,2D:avg,2D,LFYI,--,BTW3,glcmFeatures2Davg,FB,--,--,--
+grey-level co-occurrence matrix,difference entropy,CM,2D:avg,2D,LFYI,--,BTW3,glcmFeatures2Davg,FB,--,--,--
+grey-level co-occurrence matrix,sum average,CM,2D:avg,2D,LFYI,--,BTW3,glcmFeatures2Davg,FB,--,--,--
+grey-level co-occurrence matrix,sum variance,CM,2D:avg,2D,LFYI,--,BTW3,glcmFeatures2Davg,FB,--,--,--
+grey-level co-occurrence matrix,sum entropy,CM,2D:avg,2D,LFYI,--,BTW3,glcmFeatures2Davg,FB,--,--,--
+grey-level co-occurrence matrix,angular second moment,CM,2D:avg,2D,LFYI,--,BTW3,glcmFeatures2Davg,FB,--,--,--
+grey-level co-occurrence matrix,contrast,CM,2D:avg,2D,LFYI,--,BTW3,glcmFeatures2Davg,FB,--,--,--
+grey-level co-occurrence matrix,dissimilarity,CM,2D:avg,2D,LFYI,--,BTW3,glcmFeatures2Davg,FB,--,--,--
+grey-level co-occurrence matrix,inverse difference,CM,2D:avg,2D,LFYI,--,BTW3,glcmFeatures2Davg,FB,--,--,--
+grey-level co-occurrence matrix,inverse difference normalised,CM,2D:avg,2D,LFYI,--,BTW3,glcmFeatures2Davg,FB,--,--,--
+grey-level co-occurrence matrix,inverse difference moment,CM,2D:avg,2D,LFYI,--,BTW3,glcmFeatures2Davg,FB,--,--,--
+grey-level co-occurrence matrix,inverse difference moment normalised,CM,2D:avg,2D,LFYI,--,BTW3,glcmFeatures2Davg,FB,--,--,--
+grey-level co-occurrence matrix,inverse variance,CM,2D:avg,2D,LFYI,--,BTW3,glcmFeatures2Davg,FB,--,--,--
+grey-level co-occurrence matrix,correlation,CM,2D:avg,2D,LFYI,--,BTW3,glcmFeatures2Davg,FB,--,--,--
+grey-level co-occurrence matrix,autocorrelation,CM,2D:avg,2D,LFYI,--,BTW3,glcmFeatures2Davg,FB,--,--,--
+grey-level co-occurrence matrix,cluster tendency,CM,2D:avg,2D,LFYI,--,BTW3,glcmFeatures2Davg,FB,--,--,--
+grey-level co-occurrence matrix,cluster shade,CM,2D:avg,2D,LFYI,--,BTW3,glcmFeatures2Davg,FB,--,--,--
+grey-level co-occurrence matrix,cluster prominence,CM,2D:avg,2D,LFYI,--,BTW3,glcmFeatures2Davg,FB,--,--,--
+grey-level co-occurrence matrix,first measure of information correlation,CM,2D:avg,2D,LFYI,--,BTW3,glcmFeatures2Davg,FB,--,--,--
+grey-level co-occurrence matrix,second measure of information correlation,CM,2D:avg,2D,LFYI,--,BTW3,glcmFeatures2Davg,FB,--,--,--
+grey-level co-occurrence matrix,joint maximum,CM,2.5D:dmrg,2D,LFYI,--,JJUI,glcmFeatures2DDmrg,FB,--,--,--
+grey-level co-occurrence matrix,joint average,CM,2.5D:dmrg,2D,LFYI,--,JJUI,glcmFeatures2DDmrg,FB,--,--,--
+grey-level co-occurrence matrix,joint variance,CM,2.5D:dmrg,2D,LFYI,--,JJUI,glcmFeatures2DDmrg,FB,--,--,--
+grey-level co-occurrence matrix,joint entropy,CM,2.5D:dmrg,2D,LFYI,--,JJUI,glcmFeatures2DDmrg,FB,--,--,--
+grey-level co-occurrence matrix,difference average,CM,2.5D:dmrg,2D,LFYI,--,JJUI,glcmFeatures2DDmrg,FB,--,--,--
+grey-level co-occurrence matrix,difference variance,CM,2.5D:dmrg,2D,LFYI,--,JJUI,glcmFeatures2DDmrg,FB,--,--,--
+grey-level co-occurrence matrix,difference entropy,CM,2.5D:dmrg,2D,LFYI,--,JJUI,glcmFeatures2DDmrg,FB,--,--,--
+grey-level co-occurrence matrix,sum average,CM,2.5D:dmrg,2D,LFYI,--,JJUI,glcmFeatures2DDmrg,FB,--,--,--
+grey-level co-occurrence matrix,sum variance,CM,2.5D:dmrg,2D,LFYI,--,JJUI,glcmFeatures2DDmrg,FB,--,--,--
+grey-level co-occurrence matrix,sum entropy,CM,2.5D:dmrg,2D,LFYI,--,JJUI,glcmFeatures2DDmrg,FB,--,--,--
+grey-level co-occurrence matrix,angular second moment,CM,2.5D:dmrg,2D,LFYI,--,JJUI,glcmFeatures2DDmrg,FB,--,--,--
+grey-level co-occurrence matrix,contrast,CM,2.5D:dmrg,2D,LFYI,--,JJUI,glcmFeatures2DDmrg,FB,--,--,--
+grey-level co-occurrence matrix,dissimilarity,CM,2.5D:dmrg,2D,LFYI,--,JJUI,glcmFeatures2DDmrg,FB,--,--,--
+grey-level co-occurrence matrix,inverse difference,CM,2.5D:dmrg,2D,LFYI,--,JJUI,glcmFeatures2DDmrg,FB,--,--,--
+grey-level co-occurrence matrix,inverse difference normalised,CM,2.5D:dmrg,2D,LFYI,--,JJUI,glcmFeatures2DDmrg,FB,--,--,--
+grey-level co-occurrence matrix,inverse difference moment,CM,2.5D:dmrg,2D,LFYI,--,JJUI,glcmFeatures2DDmrg,FB,--,--,--
+grey-level co-occurrence matrix,inverse difference moment normalised,CM,2.5D:dmrg,2D,LFYI,--,JJUI,glcmFeatures2DDmrg,FB,--,--,--
+grey-level co-occurrence matrix,inverse variance,CM,2.5D:dmrg,2D,LFYI,--,JJUI,glcmFeatures2DDmrg,FB,--,--,--
+grey-level co-occurrence matrix,correlation,CM,2.5D:dmrg,2D,LFYI,--,JJUI,glcmFeatures2DDmrg,FB,--,--,--
+grey-level co-occurrence matrix,autocorrelation,CM,2.5D:dmrg,2D,LFYI,--,JJUI,glcmFeatures2DDmrg,FB,--,--,--
+grey-level co-occurrence matrix,cluster tendency,CM,2.5D:dmrg,2D,LFYI,--,JJUI,glcmFeatures2DDmrg,FB,--,--,--
+grey-level co-occurrence matrix,cluster shade,CM,2.5D:dmrg,2D,LFYI,--,JJUI,glcmFeatures2DDmrg,FB,--,--,--
+grey-level co-occurrence matrix,cluster prominence,CM,2.5D:dmrg,2D,LFYI,--,JJUI,glcmFeatures2DDmrg,FB,--,--,--
+grey-level co-occurrence matrix,first measure of information correlation,CM,2.5D:dmrg,2D,LFYI,--,JJUI,glcmFeatures2DDmrg,FB,--,--,--
+grey-level co-occurrence matrix,second measure of information correlation,CM,2.5D:dmrg,2D,LFYI,--,JJUI,glcmFeatures2DDmrg,FB,--,--,--
+grey-level co-occurrence matrix,joint maximum,CM,2D:mrg,2D,LFYI,--,SUJT,glcmFeatures2Dmrg,FB,--,--,--
+grey-level co-occurrence matrix,joint average,CM,2D:mrg,2D,LFYI,--,SUJT,glcmFeatures2Dmrg,FB,--,--,--
+grey-level co-occurrence matrix,joint variance,CM,2D:mrg,2D,LFYI,--,SUJT,glcmFeatures2Dmrg,FB,--,--,--
+grey-level co-occurrence matrix,joint entropy,CM,2D:mrg,2D,LFYI,--,SUJT,glcmFeatures2Dmrg,FB,--,--,--
+grey-level co-occurrence matrix,difference average,CM,2D:mrg,2D,LFYI,--,SUJT,glcmFeatures2Dmrg,FB,--,--,--
+grey-level co-occurrence matrix,difference variance,CM,2D:mrg,2D,LFYI,--,SUJT,glcmFeatures2Dmrg,FB,--,--,--
+grey-level co-occurrence matrix,difference entropy,CM,2D:mrg,2D,LFYI,--,SUJT,glcmFeatures2Dmrg,FB,--,--,--
+grey-level co-occurrence matrix,sum average,CM,2D:mrg,2D,LFYI,--,SUJT,glcmFeatures2Dmrg,FB,--,--,--
+grey-level co-occurrence matrix,sum variance,CM,2D:mrg,2D,LFYI,--,SUJT,glcmFeatures2Dmrg,FB,--,--,--
+grey-level co-occurrence matrix,sum entropy,CM,2D:mrg,2D,LFYI,--,SUJT,glcmFeatures2Dmrg,FB,--,--,--
+grey-level co-occurrence matrix,angular second moment,CM,2D:mrg,2D,LFYI,--,SUJT,glcmFeatures2Dmrg,FB,--,--,--
+grey-level co-occurrence matrix,contrast,CM,2D:mrg,2D,LFYI,--,SUJT,glcmFeatures2Dmrg,FB,--,--,--
+grey-level co-occurrence matrix,dissimilarity,CM,2D:mrg,2D,LFYI,--,SUJT,glcmFeatures2Dmrg,FB,--,--,--
+grey-level co-occurrence matrix,inverse difference,CM,2D:mrg,2D,LFYI,--,SUJT,glcmFeatures2Dmrg,FB,--,--,--
+grey-level co-occurrence matrix,inverse difference normalised,CM,2D:mrg,2D,LFYI,--,SUJT,glcmFeatures2Dmrg,FB,--,--,--
+grey-level co-occurrence matrix,inverse difference moment,CM,2D:mrg,2D,LFYI,--,SUJT,glcmFeatures2Dmrg,FB,--,--,--
+grey-level co-occurrence matrix,inverse difference moment normalised,CM,2D:mrg,2D,LFYI,--,SUJT,glcmFeatures2Dmrg,FB,--,--,--
+grey-level co-occurrence matrix,inverse variance,CM,2D:mrg,2D,LFYI,--,SUJT,glcmFeatures2Dmrg,FB,--,--,--
+grey-level co-occurrence matrix,correlation,CM,2D:mrg,2D,LFYI,--,SUJT,glcmFeatures2Dmrg,FB,--,--,--
+grey-level co-occurrence matrix,autocorrelation,CM,2D:mrg,2D,LFYI,--,SUJT,glcmFeatures2Dmrg,FB,--,--,--
+grey-level co-occurrence matrix,cluster tendency,CM,2D:mrg,2D,LFYI,--,SUJT,glcmFeatures2Dmrg,FB,--,--,--
+grey-level co-occurrence matrix,cluster shade,CM,2D:mrg,2D,LFYI,--,SUJT,glcmFeatures2Dmrg,FB,--,--,--
+grey-level co-occurrence matrix,cluster prominence,CM,2D:mrg,2D,LFYI,--,SUJT,glcmFeatures2Dmrg,FB,--,--,--
+grey-level co-occurrence matrix,first measure of information correlation,CM,2D:mrg,2D,LFYI,--,SUJT,glcmFeatures2Dmrg,FB,--,--,--
+grey-level co-occurrence matrix,second measure of information correlation,CM,2D:mrg,2D,LFYI,--,SUJT,glcmFeatures2Dmrg,FB,--,--,--
+grey-level co-occurrence matrix,joint maximum,CM,2.5D:vmrg,2D,LFYI,--,ZWTZ,glcmFeatures2Dvmrg,FB,--,--,--
+grey-level co-occurrence matrix,joint average,CM,2.5D:vmrg,2D,LFYI,--,ZWTZ,glcmFeatures2Dvmrg,FB,--,--,--
+grey-level co-occurrence matrix,joint variance,CM,2.5D:vmrg,2D,LFYI,--,ZWTZ,glcmFeatures2Dvmrg,FB,--,--,--
+grey-level co-occurrence matrix,joint entropy,CM,2.5D:vmrg,2D,LFYI,--,ZWTZ,glcmFeatures2Dvmrg,FB,--,--,--
+grey-level co-occurrence matrix,difference average,CM,2.5D:vmrg,2D,LFYI,--,ZWTZ,glcmFeatures2Dvmrg,FB,--,--,--
+grey-level co-occurrence matrix,difference variance,CM,2.5D:vmrg,2D,LFYI,--,ZWTZ,glcmFeatures2Dvmrg,FB,--,--,--
+grey-level co-occurrence matrix,difference entropy,CM,2.5D:vmrg,2D,LFYI,--,ZWTZ,glcmFeatures2Dvmrg,FB,--,--,--
+grey-level co-occurrence matrix,sum average,CM,2.5D:vmrg,2D,LFYI,--,ZWTZ,glcmFeatures2Dvmrg,FB,--,--,--
+grey-level co-occurrence matrix,sum variance,CM,2.5D:vmrg,2D,LFYI,--,ZWTZ,glcmFeatures2Dvmrg,FB,--,--,--
+grey-level co-occurrence matrix,sum entropy,CM,2.5D:vmrg,2D,LFYI,--,ZWTZ,glcmFeatures2Dvmrg,FB,--,--,--
+grey-level co-occurrence matrix,angular second moment,CM,2.5D:vmrg,2D,LFYI,--,ZWTZ,glcmFeatures2Dvmrg,FB,--,--,--
+grey-level co-occurrence matrix,contrast,CM,2.5D:vmrg,2D,LFYI,--,ZWTZ,glcmFeatures2Dvmrg,FB,--,--,--
+grey-level co-occurrence matrix,dissimilarity,CM,2.5D:vmrg,2D,LFYI,--,ZWTZ,glcmFeatures2Dvmrg,FB,--,--,--
+grey-level co-occurrence matrix,inverse difference,CM,2.5D:vmrg,2D,LFYI,--,ZWTZ,glcmFeatures2Dvmrg,FB,--,--,--
+grey-level co-occurrence matrix,inverse difference normalised,CM,2.5D:vmrg,2D,LFYI,--,ZWTZ,glcmFeatures2Dvmrg,FB,--,--,--
+grey-level co-occurrence matrix,inverse difference moment,CM,2.5D:vmrg,2D,LFYI,--,ZWTZ,glcmFeatures2Dvmrg,FB,--,--,--
+grey-level co-occurrence matrix,inverse difference moment normalised,CM,2.5D:vmrg,2D,LFYI,--,ZWTZ,glcmFeatures2Dvmrg,FB,--,--,--
+grey-level co-occurrence matrix,inverse variance,CM,2.5D:vmrg,2D,LFYI,--,ZWTZ,glcmFeatures2Dvmrg,FB,--,--,--
+grey-level co-occurrence matrix,correlation,CM,2.5D:vmrg,2D,LFYI,--,ZWTZ,glcmFeatures2Dvmrg,FB,--,--,--
+grey-level co-occurrence matrix,autocorrelation,CM,2.5D:vmrg,2D,LFYI,--,ZWTZ,glcmFeatures2Dvmrg,FB,--,--,--
+grey-level co-occurrence matrix,cluster tendency,CM,2.5D:vmrg,2D,LFYI,--,ZWTZ,glcmFeatures2Dvmrg,FB,--,--,--
+grey-level co-occurrence matrix,cluster shade,CM,2.5D:vmrg,2D,LFYI,--,ZWTZ,glcmFeatures2Dvmrg,FB,--,--,--
+grey-level co-occurrence matrix,cluster prominence,CM,2.5D:vmrg,2D,LFYI,--,ZWTZ,glcmFeatures2Dvmrg,FB,--,--,--
+grey-level co-occurrence matrix,first measure of information correlation,CM,2.5D:vmrg,2D,LFYI,--,ZWTZ,glcmFeatures2Dvmrg,FB,--,--,--
+grey-level co-occurrence matrix,second measure of information correlation,CM,2.5D:vmrg,2D,LFYI,--,ZWTZ,glcmFeatures2Dvmrg,FB,--,--,--
+grey-level co-occurrence matrix,joint maximun,CM,3D:avg,3D,LFYI,--,ITBB,glcmFeatures3Davg,FB,--,--,--
+grey-level co-occurrence matrix,joint average,CM,3D:avg,3D,LFYI,--,ITBB,glcmFeatures3Davg,FB,--,--,--
+grey-level co-occurrence matrix,joint variance,CM,3D:avg,3D,LFYI,--,ITBB,glcmFeatures3Davg,FB,--,--,--
+grey-level co-occurrence matrix,joint entropy,CM,3D:avg,3D,LFYI,--,ITBB,glcmFeatures3Davg,FB,--,--,--
+grey-level co-occurrence matrix,difference average,CM,3D:avg,3D,LFYI,--,ITBB,glcmFeatures3Davg,FB,--,--,--
+grey-level co-occurrence matrix,difference variance,CM,3D:avg,3D,LFYI,--,ITBB,glcmFeatures3Davg,FB,--,--,--
+grey-level co-occurrence matrix,difference entropy,CM,3D:avg,3D,LFYI,--,ITBB,glcmFeatures3Davg,FB,--,--,--
+grey-level co-occurrence matrix,sum average,CM,3D:avg,3D,LFYI,--,ITBB,glcmFeatures3Davg,FB,--,--,--
+grey-level co-occurrence matrix,sum variance,CM,3D:avg,3D,LFYI,--,ITBB,glcmFeatures3Davg,FB,--,--,--
+grey-level co-occurrence matrix,sum entropy,CM,3D:avg,3D,LFYI,--,ITBB,glcmFeatures3Davg,FB,--,--,--
+grey-level co-occurrence matrix,angular second moment,CM,3D:avg,3D,LFYI,--,ITBB,glcmFeatures3Davg,FB,--,--,--
+grey-level co-occurrence matrix,contrast,CM,3D:avg,3D,LFYI,--,ITBB,glcmFeatures3Davg,FB,--,--,--
+grey-level co-occurrence matrix,dissimilarity,CM,3D:avg,3D,LFYI,--,ITBB,glcmFeatures3Davg,FB,--,--,--
+grey-level co-occurrence matrix,inverse difference,CM,3D:avg,3D,LFYI,--,ITBB,glcmFeatures3Davg,FB,--,--,--
+grey-level co-occurrence matrix,inverse difference normalised,CM,3D:avg,3D,LFYI,--,ITBB,glcmFeatures3Davg,FB,--,--,--
+grey-level co-occurrence matrix,inverse difference moment,CM,3D:avg,3D,LFYI,--,ITBB,glcmFeatures3Davg,FB,--,--,--
+grey-level co-occurrence matrix,inverse difference moment normalised,CM,3D:avg,3D,LFYI,--,ITBB,glcmFeatures3Davg,FB,--,--,--
+grey-level co-occurrence matrix,inverse variance,CM,3D:avg,3D,LFYI,--,ITBB,glcmFeatures3Davg,FB,--,--,--
+grey-level co-occurrence matrix,correlation,CM,3D:avg,3D,LFYI,--,ITBB,glcmFeatures3Davg,FB,--,--,--
+grey-level co-occurrence matrix,autocorrelation,CM,3D:avg,3D,LFYI,--,ITBB,glcmFeatures3Davg,FB,--,--,--
+grey-level co-occurrence matrix,cluster tendency,CM,3D:avg,3D,LFYI,--,ITBB,glcmFeatures3Davg,FB,--,--,--
+grey-level co-occurrence matrix,cluster shade,CM,3D:avg,3D,LFYI,--,ITBB,glcmFeatures3Davg,FB,--,--,--
+grey-level co-occurrence matrix,cluster prominence,CM,3D:avg,3D,LFYI,--,ITBB,glcmFeatures3Davg,FB,--,--,--
+grey-level co-occurrence matrix,first measure of information correlation,CM,3D:avg,3D,LFYI,--,ITBB,glcmFeatures3Davg,FB,--,--,--
+grey-level co-occurrence matrix,second measure of information correlation,CM,3D:avg,3D,LFYI,--,ITBB,glcmFeatures3Davg,FB,--,--,--
+grey-level co-occurrence matrix,joint maximun,CM,3D:mrg,3D,LFYI,--,IAZD,glcmFeatures3DWmrg,FB,--,--,--
+grey-level co-occurrence matrix,joint average,CM,3D:mrg,3D,LFYI,--,IAZD,glcmFeatures3DWmrg,FB,--,--,--
+grey-level co-occurrence matrix,joint variance,CM,3D:mrg,3D,LFYI,--,IAZD,glcmFeatures3DWmrg,FB,--,--,--
+grey-level co-occurrence matrix,joint entropy,CM,3D:mrg,3D,LFYI,--,IAZD,glcmFeatures3DWmrg,FB,--,--,--
+grey-level co-occurrence matrix,difference average,CM,3D:mrg,3D,LFYI,--,IAZD,glcmFeatures3DWmrg,FB,--,--,--
+grey-level co-occurrence matrix,difference variance,CM,3D:mrg,3D,LFYI,--,IAZD,glcmFeatures3DWmrg,FB,--,--,--
+grey-level co-occurrence matrix,difference entropy,CM,3D:mrg,3D,LFYI,--,IAZD,glcmFeatures3DWmrg,FB,--,--,--
+grey-level co-occurrence matrix,sum average,CM,3D:mrg,3D,LFYI,--,IAZD,glcmFeatures3DWmrg,FB,--,--,--
+grey-level co-occurrence matrix,sum variance,CM,3D:mrg,3D,LFYI,--,IAZD,glcmFeatures3DWmrg,FB,--,--,--
+grey-level co-occurrence matrix,sum entropy,CM,3D:mrg,3D,LFYI,--,IAZD,glcmFeatures3DWmrg,FB,--,--,--
+grey-level co-occurrence matrix,angular second moment,CM,3D:mrg,3D,LFYI,--,IAZD,glcmFeatures3DWmrg,FB,--,--,--
+grey-level co-occurrence matrix,contrast,CM,3D:mrg,3D,LFYI,--,IAZD,glcmFeatures3DWmrg,FB,--,--,--
+grey-level co-occurrence matrix,dissimilarity,CM,3D:mrg,3D,LFYI,--,IAZD,glcmFeatures3DWmrg,FB,--,--,--
+grey-level co-occurrence matrix,inverse difference,CM,3D:mrg,3D,LFYI,--,IAZD,glcmFeatures3DWmrg,FB,--,--,--
+grey-level co-occurrence matrix,inverse difference normalised,CM,3D:mrg,3D,LFYI,--,IAZD,glcmFeatures3DWmrg,FB,--,--,--
+grey-level co-occurrence matrix,inverse difference moment,CM,3D:mrg,3D,LFYI,--,IAZD,glcmFeatures3DWmrg,FB,--,--,--
+grey-level co-occurrence matrix,inverse difference moment normalised,CM,3D:mrg,3D,LFYI,--,IAZD,glcmFeatures3DWmrg,FB,--,--,--
+grey-level co-occurrence matrix,inverse variance,CM,3D:mrg,3D,LFYI,--,IAZD,glcmFeatures3DWmrg,FB,--,--,--
+grey-level co-occurrence matrix,correlation,CM,3D:mrg,3D,LFYI,--,IAZD,glcmFeatures3DWmrg,FB,--,--,--
+grey-level co-occurrence matrix,autocorrelation,CM,3D:mrg,3D,LFYI,--,IAZD,glcmFeatures3DWmrg,FB,--,--,--
+grey-level co-occurrence matrix,cluster tendency,CM,3D:mrg,3D,LFYI,--,IAZD,glcmFeatures3DWmrg,FB,--,--,--
+grey-level co-occurrence matrix,cluster shade,CM,3D:mrg,3D,LFYI,--,IAZD,glcmFeatures3DWmrg,FB,--,--,--
+grey-level co-occurrence matrix,cluster prominence,CM,3D:mrg,3D,LFYI,--,IAZD,glcmFeatures3DWmrg,FB,--,--,--
+grey-level co-occurrence matrix,first measure of information correlation,CM,3D:mrg,3D,LFYI,--,IAZD,glcmFeatures3DWmrg,FB,--,--,--
+grey-level co-occurrence matrix,second measure of information correlation,CM,3D:mrg,3D,LFYI,--,IAZD,glcmFeatures3DWmrg,FB,--,--,--
+grey-level run length matrix,short run emphasis,RLM,2D:avg,2D,TP0I,--,BTW3,GLRLMFeatures2Davg,FB,--,--,--
+grey-level run length matrix,long runs emphasis,RLM,2D:avg,2D,TP0I,--,BTW3,GLRLMFeatures2Davg,FB,--,--,--
+grey-level run length matrix,Low grey level run emphasis,RLM,2D:avg,2D,TP0I,--,BTW3,GLRLMFeatures2Davg,FB,--,--,--
+grey-level run length matrix,High grey level run emphasis,RLM,2D:avg,2D,TP0I,--,BTW3,GLRLMFeatures2Davg,FB,--,--,--
+grey-level run length matrix,Short run low grey level emphasis,RLM,2D:avg,2D,TP0I,--,BTW3,GLRLMFeatures2Davg,FB,--,--,--
+grey-level run length matrix,Short run high grey level emphasis,RLM,2D:avg,2D,TP0I,--,BTW3,GLRLMFeatures2Davg,FB,--,--,--
+grey-level run length matrix,Long run low grey level emphasis,RLM,2D:avg,2D,TP0I,--,BTW3,GLRLMFeatures2Davg,FB,--,--,--
+grey-level run length matrix,Long run high grey level emphasis,RLM,2D:avg,2D,TP0I,--,BTW3,GLRLMFeatures2Davg,FB,--,--,--
+grey-level run length matrix,Grey level non uniformity,RLM,2D:avg,2D,TP0I,--,BTW3,GLRLMFeatures2Davg,FB,--,--,--
+grey-level run length matrix,Grey level non uniformity normalized,RLM,2D:avg,2D,TP0I,--,BTW3,GLRLMFeatures2Davg,FB,--,--,--
+grey-level run length matrix,Run length non uniformity,RLM,2D:avg,2D,TP0I,--,BTW3,GLRLMFeatures2Davg,FB,--,--,--
+grey-level run length matrix,Run length non uniformity normalized,RLM,2D:avg,2D,TP0I,--,BTW3,GLRLMFeatures2Davg,FB,--,--,--
+grey-level run length matrix,Run percentage,RLM,2D:avg,2D,TP0I,--,BTW3,GLRLMFeatures2Davg,FB,--,--,--
+grey-level run length matrix,Grey level variance,RLM,2D:avg,2D,TP0I,--,BTW3,GLRLMFeatures2Davg,FB,--,--,--
+grey-level run length matrix,Run length variance,RLM,2D:avg,2D,TP0I,--,BTW3,GLRLMFeatures2Davg,FB,--,--,--
+grey-level run length matrix,Run entropy,RLM,2D:avg,2D,TP0I,--,BTW3,GLRLMFeatures2Davg,FB,--,--,--
+grey-level run length matrix,short run emphasis,RLM,2.5D:dmrg,2D,TP0I,--,JJUI,GLRLMFeatures2DDmrg,FB,--,--,--
+grey-level run length matrix,long runs emphasis,RLM,2.5D:dmrg,2D,TP0I,--,JJUI,GLRLMFeatures2DDmrg,FB,--,--,--
+grey-level run length matrix,Low grey level run emphasis,RLM,2.5D:dmrg,2D,TP0I,--,JJUI,GLRLMFeatures2DDmrg,FB,--,--,--
+grey-level run length matrix,High grey level run emphasis,RLM,2.5D:dmrg,2D,TP0I,--,JJUI,GLRLMFeatures2DDmrg,FB,--,--,--
+grey-level run length matrix,Short run low grey level emphasis,RLM,2.5D:dmrg,2D,TP0I,--,JJUI,GLRLMFeatures2DDmrg,FB,--,--,--
+grey-level run length matrix,Short run high grey level emphasis,RLM,2.5D:dmrg,2D,TP0I,--,JJUI,GLRLMFeatures2DDmrg,FB,--,--,--
+grey-level run length matrix,Long run low grey level emphasis,RLM,2.5D:dmrg,2D,TP0I,--,JJUI,GLRLMFeatures2DDmrg,FB,--,--,--
+grey-level run length matrix,Long run high grey level emphasis,RLM,2.5D:dmrg,2D,TP0I,--,JJUI,GLRLMFeatures2DDmrg,FB,--,--,--
+grey-level run length matrix,Grey level non uniformity,RLM,2.5D:dmrg,2D,TP0I,--,JJUI,GLRLMFeatures2DDmrg,FB,--,--,--
+grey-level run length matrix,Grey level non uniformity normalized,RLM,2.5D:dmrg,2D,TP0I,--,JJUI,GLRLMFeatures2DDmrg,FB,--,--,--
+grey-level run length matrix,Run length non uniformity,RLM,2.5D:dmrg,2D,TP0I,--,JJUI,GLRLMFeatures2DDmrg,FB,--,--,--
+grey-level run length matrix,Run length non uniformity normalized,RLM,2.5D:dmrg,2D,TP0I,--,JJUI,GLRLMFeatures2DDmrg,FB,--,--,--
+grey-level run length matrix,Run percentage,RLM,2.5D:dmrg,2D,TP0I,--,JJUI,GLRLMFeatures2DDmrg,FB,--,--,--
+grey-level run length matrix,Grey level variance,RLM,2.5D:dmrg,2D,TP0I,--,JJUI,GLRLMFeatures2DDmrg,FB,--,--,--
+grey-level run length matrix,Run length variance,RLM,2.5D:dmrg,2D,TP0I,--,JJUI,GLRLMFeatures2DDmrg,FB,--,--,--
+grey-level run length matrix,Run entropy,RLM,2.5D:dmrg,2D,TP0I,--,JJUI,GLRLMFeatures2DDmrg,FB,--,--,--
+grey-level run length matrix,short run emphasis,RLM,2.5D:mrg,2D,TP0I,--,ZWTZ,GLRLMFeatures2DWmrg,FB,--,--,--
+grey-level run length matrix,long runs emphasis,RLM,2.5D:mrg,2D,TP0I,--,ZWTZ,GLRLMFeatures2DWmrg,FB,--,--,--
+grey-level run length matrix,Low grey level run emphasis,RLM,2.5D:mrg,2D,TP0I,--,ZWTZ,GLRLMFeatures2DWmrg,FB,--,--,--
+grey-level run length matrix,High grey level run emphasis,RLM,2.5D:mrg,2D,TP0I,--,ZWTZ,GLRLMFeatures2DWmrg,FB,--,--,--
+grey-level run length matrix,Short run low grey level emphasis,RLM,2.5D:mrg,2D,TP0I,--,ZWTZ,GLRLMFeatures2DWmrg,FB,--,--,--
+grey-level run length matrix,Short run high grey level emphasis,RLM,2.5D:mrg,2D,TP0I,--,ZWTZ,GLRLMFeatures2DWmrg,FB,--,--,--
+grey-level run length matrix,Long run low grey level emphasis,RLM,2.5D:mrg,2D,TP0I,--,ZWTZ,GLRLMFeatures2DWmrg,FB,--,--,--
+grey-level run length matrix,Long run high grey level emphasis,RLM,2.5D:mrg,2D,TP0I,--,ZWTZ,GLRLMFeatures2DWmrg,FB,--,--,--
+grey-level run length matrix,Grey level non uniformity,RLM,2.5D:mrg,2D,TP0I,--,ZWTZ,GLRLMFeatures2DWmrg,FB,--,--,--
+grey-level run length matrix,Grey level non uniformity normalized,RLM,2.5D:mrg,2D,TP0I,--,ZWTZ,GLRLMFeatures2DWmrg,FB,--,--,--
+grey-level run length matrix,Run length non uniformity,RLM,2.5D:mrg,2D,TP0I,--,ZWTZ,GLRLMFeatures2DWmrg,FB,--,--,--
+grey-level run length matrix,Run length non uniformity normalized,RLM,2.5D:mrg,2D,TP0I,--,ZWTZ,GLRLMFeatures2DWmrg,FB,--,--,--
+grey-level run length matrix,Run percentage,RLM,2.5D:mrg,2D,TP0I,--,ZWTZ,GLRLMFeatures2DWmrg,FB,--,--,--
+grey-level run length matrix,Grey level variance,RLM,2.5D:mrg,2D,TP0I,--,ZWTZ,GLRLMFeatures2DWmrg,FB,--,--,--
+grey-level run length matrix,Run length variance,RLM,2.5D:mrg,2D,TP0I,--,ZWTZ,GLRLMFeatures2DWmrg,FB,--,--,--
+grey-level run length matrix,Run entropy,RLM,2.5D:mrg,2D,TP0I,--,ZWTZ,GLRLMFeatures2DWmrg,FB,--,--,--
+grey-level run length matrix,short run emphasis,RLM,2.5D:vmrg,2D,TP0I,--,ZWTZ,GLRLMFeatures2Dvmrg,FB,--,--,--
+grey-level run length matrix,long runs emphasis,RLM,2.5D:vmrg,2D,TP0I,--,ZWTZ,GLRLMFeatures2Dvmrg,FB,--,--,--
+grey-level run length matrix,Low grey level run emphasis,RLM,2.5D:vmrg,2D,TP0I,--,ZWTZ,GLRLMFeatures2Dvmrg,FB,--,--,--
+grey-level run length matrix,High grey level run emphasis,RLM,2.5D:vmrg,2D,TP0I,--,ZWTZ,GLRLMFeatures2Dvmrg,FB,--,--,--
+grey-level run length matrix,Short run low grey level emphasis,RLM,2.5D:vmrg,2D,TP0I,--,ZWTZ,GLRLMFeatures2Dvmrg,FB,--,--,--
+grey-level run length matrix,Short run high grey level emphasis,RLM,2.5D:vmrg,2D,TP0I,--,ZWTZ,GLRLMFeatures2Dvmrg,FB,--,--,--
+grey-level run length matrix,Long run low grey level emphasis,RLM,2.5D:vmrg,2D,TP0I,--,ZWTZ,GLRLMFeatures2Dvmrg,FB,--,--,--
+grey-level run length matrix,Long run high grey level emphasis,RLM,2.5D:vmrg,2D,TP0I,--,ZWTZ,GLRLMFeatures2Dvmrg,FB,--,--,--
+grey-level run length matrix,Grey level non uniformity,RLM,2.5D:vmrg,2D,TP0I,--,ZWTZ,GLRLMFeatures2Dvmrg,FB,--,--,--
+grey-level run length matrix,Grey level non uniformity normalized,RLM,2.5D:vmrg,2D,TP0I,--,ZWTZ,GLRLMFeatures2Dvmrg,FB,--,--,--
+grey-level run length matrix,Run length non uniformity,RLM,2.5D:vmrg,2D,TP0I,--,ZWTZ,GLRLMFeatures2Dvmrg,FB,--,--,--
+grey-level run length matrix,Run length non uniformity normalized,RLM,2.5D:vmrg,2D,TP0I,--,ZWTZ,GLRLMFeatures2Dvmrg,FB,--,--,--
+grey-level run length matrix,Run percentage,RLM,2.5D:vmrg,2D,TP0I,--,ZWTZ,GLRLMFeatures2Dvmrg,FB,--,--,--
+grey-level run length matrix,Grey level variance,RLM,2.5D:vmrg,2D,TP0I,--,ZWTZ,GLRLMFeatures2Dvmrg,FB,--,--,--
+grey-level run length matrix,Run length variance,RLM,2.5D:vmrg,2D,TP0I,--,ZWTZ,GLRLMFeatures2Dvmrg,FB,--,--,--
+grey-level run length matrix,Run entropy,RLM,2.5D:vmrg,2D,TP0I,--,ZWTZ,GLRLMFeatures2Dvmrg,FB,--,--,--
+grey-level run length matrix,short run emphasis,RLM,3D:avg,3D,TP0I,--,ITBB,GLRLMFeatures3Davg,FB,--,--,--
+grey-level run length matrix,long runs emphasis,RLM,3D:avg,3D,TP0I,--,ITBB,GLRLMFeatures3Davg,FB,--,--,--
+grey-level run length matrix,Low grey level run emphasis,RLM,3D:avg,3D,TP0I,--,ITBB,GLRLMFeatures3Davg,FB,--,--,--
+grey-level run length matrix,High grey level run emphasis,RLM,3D:avg,3D,TP0I,--,ITBB,GLRLMFeatures3Davg,FB,--,--,--
+grey-level run length matrix,Short run low grey level emphasis,RLM,3D:avg,3D,TP0I,--,ITBB,GLRLMFeatures3Davg,FB,--,--,--
+grey-level run length matrix,Short run high grey level emphasis,RLM,3D:avg,3D,TP0I,--,ITBB,GLRLMFeatures3Davg,FB,--,--,--
+grey-level run length matrix,Long run low grey level emphasis,RLM,3D:avg,3D,TP0I,--,ITBB,GLRLMFeatures3Davg,FB,--,--,--
+grey-level run length matrix,Long run high grey level emphasis,RLM,3D:avg,3D,TP0I,--,ITBB,GLRLMFeatures3Davg,FB,--,--,--
+grey-level run length matrix,Grey level non uniformity,RLM,3D:avg,3D,TP0I,--,ITBB,GLRLMFeatures3Davg,FB,--,--,--
+grey-level run length matrix,Grey level non uniformity normalized,RLM,3D:avg,3D,TP0I,--,ITBB,GLRLMFeatures3Davg,FB,--,--,--
+grey-level run length matrix,Run length non uniformity,RLM,3D:avg,3D,TP0I,--,ITBB,GLRLMFeatures3Davg,FB,--,--,--
+grey-level run length matrix,Run length non uniformity normalized,RLM,3D:avg,3D,TP0I,--,ITBB,GLRLMFeatures3Davg,FB,--,--,--
+grey-level run length matrix,Run percentage,RLM,3D:avg,3D,TP0I,--,ITBB,GLRLMFeatures3Davg,FB,--,--,--
+grey-level run length matrix,Grey level variance,RLM,3D:avg,3D,TP0I,--,ITBB,GLRLMFeatures3Davg,FB,--,--,--
+grey-level run length matrix,Run length variance,RLM,3D:avg,3D,TP0I,--,ITBB,GLRLMFeatures3Davg,FB,--,--,--
+grey-level run length matrix,Run entropy,RLM,3D:avg,3D,TP0I,--,ITBB,GLRLMFeatures3Davg,FB,--,--,--
+grey-level run length matrix,short run emphasis,RLM,3D:mrg,3D,TP0I,--,IAZD,GLRLMFeatures3Dmrg,FB,--,--,--
+grey-level run length matrix,long runs emphasis,RLM,3D:mrg,3D,TP0I,--,IAZD,GLRLMFeatures3Dmrg,FB,--,--,--
+grey-level run length matrix,Low grey level run emphasis,RLM,3D:mrg,3D,TP0I,--,IAZD,GLRLMFeatures3Dmrg,FB,--,--,--
+grey-level run length matrix,High grey level run emphasis,RLM,3D:mrg,3D,TP0I,--,IAZD,GLRLMFeatures3Dmrg,FB,--,--,--
+grey-level run length matrix,Short run low grey level emphasis,RLM,3D:mrg,3D,TP0I,--,IAZD,GLRLMFeatures3Dmrg,FB,--,--,--
+grey-level run length matrix,Short run high grey level emphasis,RLM,3D:mrg,3D,TP0I,--,IAZD,GLRLMFeatures3Dmrg,FB,--,--,--
+grey-level run length matrix,Long run low grey level emphasis,RLM,3D:mrg,3D,TP0I,--,IAZD,GLRLMFeatures3Dmrg,FB,--,--,--
+grey-level run length matrix,Long run high grey level emphasis,RLM,3D:mrg,3D,TP0I,--,IAZD,GLRLMFeatures3Dmrg,FB,--,--,--
+grey-level run length matrix,Grey level non uniformity,RLM,3D:mrg,3D,TP0I,--,IAZD,GLRLMFeatures3Dmrg,FB,--,--,--
+grey-level run length matrix,Grey level non uniformity normalized,RLM,3D:mrg,3D,TP0I,--,IAZD,GLRLMFeatures3Dmrg,FB,--,--,--
+grey-level run length matrix,Run length non uniformity,RLM,3D:mrg,3D,TP0I,--,IAZD,GLRLMFeatures3Dmrg,FB,--,--,--
+grey-level run length matrix,Run length non uniformity normalized,RLM,3D:mrg,3D,TP0I,--,IAZD,GLRLMFeatures3Dmrg,FB,--,--,--
+grey-level run length matrix,Run percentage,RLM,3D:mrg,3D,TP0I,--,IAZD,GLRLMFeatures3Dmrg,FB,--,--,--
+grey-level run length matrix,Grey level variance,RLM,3D:mrg,3D,TP0I,--,IAZD,GLRLMFeatures3Dmrg,FB,--,--,--
+grey-level run length matrix,Run length variance,RLM,3D:mrg,3D,TP0I,--,IAZD,GLRLMFeatures3Dmrg,FB,--,--,--
+grey-level run length matrix,Run entropy,RLM,3D:mrg,3D,TP0I,--,IAZD,GLRLMFeatures3Dmrg,FB,--,--,--
+grey-level size zone matrix,small zone emphasis,SZM,2D,2D,9SAK,--,8QNN,GLSZMFeatures2Davg,FB,--,--,--
+grey-level size zone matrix,large zone emphasis,SZM,2D,2D,9SAK,--,8QNN,GLSZMFeatures2Davg,FB,--,--,--
+grey-level size zone matrix,low grey level zone emphasis,SZM,2D,2D,9SAK,--,8QNN,GLSZMFeatures2Davg,FB,--,--,--
+grey-level size zone matrix,high grey level zone emphasis,SZM,2D,2D,9SAK,--,8QNN,GLSZMFeatures2Davg,FB,--,--,--
+grey-level size zone matrix,small zone low grey level emphasis,SZM,2D,2D,9SAK,--,8QNN,GLSZMFeatures2Davg,FB,--,--,--
+grey-level size zone matrix,small zone high grey level emphasis,SZM,2D,2D,9SAK,--,8QNN,GLSZMFeatures2Davg,FB,--,--,--
+grey-level size zone matrix,large zone low grey level emphasis,SZM,2D,2D,9SAK,--,8QNN,GLSZMFeatures2Davg,FB,--,--,--
+grey-level size zone matrix,large zone high grey level emphasis,SZM,2D,2D,9SAK,--,8QNN,GLSZMFeatures2Davg,FB,--,--,--
+grey-level size zone matrix,grey level non uniformity glszm,SZM,2D,2D,9SAK,--,8QNN,GLSZMFeatures2Davg,FB,--,--,--
+grey-level size zone matrix,grey level non uniformity normalized glszm,SZM,2D,2D,9SAK,--,8QNN,GLSZMFeatures2Davg,FB,--,--,--
+grey-level size zone matrix,zone size non uniformity,SZM,2D,2D,9SAK,--,8QNN,GLSZMFeatures2Davg,FB,--,--,--
+grey-level size zone matrix,zone size non uniformity normalized,SZM,2D,2D,9SAK,--,8QNN,GLSZMFeatures2Davg,FB,--,--,--
+grey-level size zone matrix,zone percentage glszm,SZM,2D,2D,9SAK,--,8QNN,GLSZMFeatures2Davg,FB,--,--,--
+grey-level size zone matrix,grey level variance glszm,SZM,2D,2D,9SAK,--,8QNN,GLSZMFeatures2Davg,FB,--,--,--
+grey-level size zone matrix,zone size variance,SZM,2D,2D,9SAK,--,8QNN,GLSZMFeatures2Davg,FB,--,--,--
+grey-level size zone matrix,zone size entropy,SZM,2D,2D,9SAK,--,8QNN,GLSZMFeatures2Davg,FB,--,--,--
+grey-level size zone matrix,small zone emphasis,SZM,2.5D,2D,9SAK,--,62GR,GLSZMFeatures2Dvmrg,FB,--,--,--
+grey-level size zone matrix,large zone emphasis,SZM,2.5D,2D,9SAK,--,62GR,GLSZMFeatures2Dvmrg,FB,--,--,--
+grey-level size zone matrix,low grey level zone emphasis,SZM,2.5D,2D,9SAK,--,62GR,GLSZMFeatures2Dvmrg,FB,--,--,--
+grey-level size zone matrix,high grey level zone emphasis,SZM,2.5D,2D,9SAK,--,62GR,GLSZMFeatures2Dvmrg,FB,--,--,--
+grey-level size zone matrix,small zone low grey level emphasis,SZM,2.5D,2D,9SAK,--,62GR,GLSZMFeatures2Dvmrg,FB,--,--,--
+grey-level size zone matrix,small zone high grey level emphasis,SZM,2.5D,2D,9SAK,--,62GR,GLSZMFeatures2Dvmrg,FB,--,--,--
+grey-level size zone matrix,large zone low grey level emphasis,SZM,2.5D,2D,9SAK,--,62GR,GLSZMFeatures2Dvmrg,FB,--,--,--
+grey-level size zone matrix,large zone high grey level emphasis,SZM,2.5D,2D,9SAK,--,62GR,GLSZMFeatures2Dvmrg,FB,--,--,--
+grey-level size zone matrix,grey level non uniformity glszm,SZM,2.5D,2D,9SAK,--,62GR,GLSZMFeatures2Dvmrg,FB,--,--,--
+grey-level size zone matrix,grey level non uniformity normalized glszm,SZM,2.5D,2D,9SAK,--,62GR,GLSZMFeatures2Dvmrg,FB,--,--,--
+grey-level size zone matrix,zone size non uniformity,SZM,2.5D,2D,9SAK,--,62GR,GLSZMFeatures2Dvmrg,FB,--,--,--
+grey-level size zone matrix,zone size non uniformity normalized,SZM,2.5D,2D,9SAK,--,62GR,GLSZMFeatures2Dvmrg,FB,--,--,--
+grey-level size zone matrix,zone percentage glszm,SZM,2.5D,2D,9SAK,--,62GR,GLSZMFeatures2Dvmrg,FB,--,--,--
+grey-level size zone matrix,grey level variance glszm,SZM,2.5D,2D,9SAK,--,62GR,GLSZMFeatures2Dvmrg,FB,--,--,--
+grey-level size zone matrix,zone size variance,SZM,2.5D,2D,9SAK,--,62GR,GLSZMFeatures2Dvmrg,FB,--,--,--
+grey-level size zone matrix,zone size entropy,SZM,2.5D,2D,9SAK,--,62GR,GLSZMFeatures2Dvmrg,FB,--,--,--
+grey-level size zone matrix,small zone emphasis,SZM,3D,3D,9SAK,--,K0B0,GLSZMFeatures3D,FB,--,--,--
+grey-level size zone matrix,large zone emphasis,SZM,3D,3D,9SAK,--,K0B0,GLSZMFeatures3D,FB,--,--,--
+grey-level size zone matrix,low grey level zone emphasis,SZM,3D,3D,9SAK,--,K0B0,GLSZMFeatures3D,FB,--,--,--
+grey-level size zone matrix,high grey level zone emphasis,SZM,3D,3D,9SAK,--,K0B0,GLSZMFeatures3D,FB,--,--,--
+grey-level size zone matrix,small zone low grey level emphasis,SZM,3D,3D,9SAK,--,K0B0,GLSZMFeatures3D,FB,--,--,--
+grey-level size zone matrix,small zone high grey level emphasis,SZM,3D,3D,9SAK,--,K0B0,GLSZMFeatures3D,FB,--,--,--
+grey-level size zone matrix,large zone low grey level emphasis,SZM,3D,3D,9SAK,--,K0B0,GLSZMFeatures3D,FB,--,--,--
+grey-level size zone matrix,large zone high grey level emphasis,SZM,3D,3D,9SAK,--,K0B0,GLSZMFeatures3D,FB,--,--,--
+grey-level size zone matrix,grey level non uniformity glszm,SZM,3D,3D,9SAK,--,K0B0,GLSZMFeatures3D,FB,--,--,--
+grey-level size zone matrix,grey level non uniformity normalized glszm,SZM,3D,3D,9SAK,--,K0B0,GLSZMFeatures3D,FB,--,--,--
+grey-level size zone matrix,zone size non uniformity,SZM,3D,3D,9SAK,--,K0B0,GLSZMFeatures3D,FB,--,--,--
+grey-level size zone matrix,zone size non uniformity normalized,SZM,3D,3D,9SAK,--,K0B0,GLSZMFeatures3D,FB,--,--,--
+grey-level size zone matrix,zone percentage glszm,SZM,3D,3D,9SAK,--,K0B0,GLSZMFeatures3D,FB,--,--,--
+grey-level size zone matrix,grey level variance glszm,SZM,3D,3D,9SAK,--,K0B0,GLSZMFeatures3D,FB,--,--,--
+grey-level size zone matrix,zone size variance,SZM,3D,3D,9SAK,--,K0B0,GLSZMFeatures3D,FB,--,--,--
+grey-level size zone matrix,zone size entropy,SZM,3D,3D,9SAK,--,K0B0,GLSZMFeatures3D,FB,--,--,--
+neighbourhood grey tone difference matrix,coarseness,TDM,2D,2D,IPET,--,8QNN,ngtdmFeatures2avg,FB,--,--,--
+neighbourhood grey tone difference matrix,contrast,TDM,2D,2D,IPET,--,8QNN,ngtdmFeatures2avg,FB,--,--,--
+neighbourhood grey tone difference matrix,busyness,TDM,2D,2D,IPET,--,8QNN,ngtdmFeatures2avg,FB,--,--,--
+neighbourhood grey tone difference matrix,complexity,TDM,2D,2D,IPET,--,8QNN,ngtdmFeatures2avg,FB,--,--,--
+neighbourhood grey tone difference matrix,strength,TDM,2D,2D,IPET,--,8QNN,ngtdmFeatures2avg,FB,--,--,--
+neighbourhood grey tone difference matrix,coarseness,TDM,2.5D,2D,IPET,--,62GR,ngtdmFeatures2Dmrg,FB,--,--,--
+neighbourhood grey tone difference matrix,contrast,TDM,2.5D,2D,IPET,--,62GR,ngtdmFeatures2Dmrg,FB,--,--,--
+neighbourhood grey tone difference matrix,busyness,TDM,2.5D,2D,IPET,--,62GR,ngtdmFeatures2Dmrg,FB,--,--,--
+neighbourhood grey tone difference matrix,complexity,TDM,2.5D,2D,IPET,--,62GR,ngtdmFeatures2Dmrg,FB,--,--,--
+neighbourhood grey tone difference matrix,strength,TDM,2.5D,2D,IPET,--,62GR,ngtdmFeatures2Dmrg,FB,--,--,--
+neighbourhood grey tone difference matrix,coarseness,TDM,3D,3D,IPET,--,K0B0,ngtdmFeatures3D,FB,--,--,--
+neighbourhood grey tone difference matrix,contrast,TDM,3D,3D,IPET,--,K0B0,ngtdmFeatures3D,FB,--,--,--
+neighbourhood grey tone difference matrix,busyness,TDM,3D,3D,IPET,--,K0B0,ngtdmFeatures3D,FB,--,--,--
+neighbourhood grey tone difference matrix,complexity,TDM,3D,3D,IPET,--,K0B0,ngtdmFeatures3D,FB,--,--,--
+neighbourhood grey tone difference matrix,strength,TDM,3D,3D,IPET,--,K0B0,ngtdmFeatures3D,FB,--,--,--
+grey-level distance zone matrix,small distance emphasis gldzm,DZM,2D,2D,VMDZ,--,8QNN,gldzmFeatures2Davg,FB,--,--,--
+grey-level distance zone matrix,large distance emphasis gldzm,DZM,2D,2D,VMDZ,--,8QNN,gldzmFeatures2Davg,FB,--,--,--
+grey-level distance zone matrix,low grey level zone emphasis gldzm,DZM,2D,2D,VMDZ,--,8QNN,gldzmFeatures2Davg,FB,--,--,--
+grey-level distance zone matrix,high grey level zone emphasis gldzm,DZM,2D,2D,VMDZ,--,8QNN,gldzmFeatures2Davg,FB,--,--,--
+grey-level distance zone matrix,small distance low grey level emphasis gldzm,DZM,2D,2D,VMDZ,--,8QNN,gldzmFeatures2Davg,FB,--,--,--
+grey-level distance zone matrix,small distance high grey level emphasis gldzm,DZM,2D,2D,VMDZ,--,8QNN,gldzmFeatures2Davg,FB,--,--,--
+grey-level distance zone matrix,large distance low grey level emphasis gldzm,DZM,2D,2D,VMDZ,--,8QNN,gldzmFeatures2Davg,FB,--,--,--
+grey-level distance zone matrix,large distance high grey level emphasis gldzm,DZM,2D,2D,VMDZ,--,8QNN,gldzmFeatures2Davg,FB,--,--,--
+grey-level distance zone matrix,grey level non uniformity gldzm,DZM,2D,2D,VMDZ,--,8QNN,gldzmFeatures2Davg,FB,--,--,--
+grey-level distance zone matrix,grey level non uniformity normalized gldzm,DZM,2D,2D,VMDZ,--,8QNN,gldzmFeatures2Davg,FB,--,--,--
+grey-level distance zone matrix,zone distance non uniformity gldzm,DZM,2D,2D,VMDZ,--,8QNN,gldzmFeatures2Davg,FB,--,--,--
+grey-level distance zone matrix,zone distance non uniformity normalized gldzm,DZM,2D,2D,VMDZ,--,8QNN,gldzmFeatures2Davg,FB,--,--,--
+grey-level distance zone matrix,zone percentage gldzm,DZM,2D,2D,VMDZ,--,8QNN,gldzmFeatures2Davg,FB,--,--,--
+grey-level distance zone matrix,grey level variance gldzm,DZM,2D,2D,VMDZ,--,8QNN,gldzmFeatures2Davg,FB,--,--,--
+grey-level distance zone matrix,zone distance variance gldzm,DZM,2D,2D,VMDZ,--,8QNN,gldzmFeatures2Davg,FB,--,--,--
+grey-level distance zone matrix,zone distance entropy gldzm,DZM,2D,2D,VMDZ,--,8QNN,gldzmFeatures2Davg,FB,--,--,--
+grey-level distance zone matrix,small distance emphasis gldzm,DZM,2.5D,2D,VMDZ,--,62GR,gldzmFeatures2Dmrg,FB,--,--,--
+grey-level distance zone matrix,large distance emphasis gldzm,DZM,2.5D,2D,VMDZ,--,62GR,gldzmFeatures2Dmrg,FB,--,--,--
+grey-level distance zone matrix,low grey level zone emphasis gldzm,DZM,2.5D,2D,VMDZ,--,62GR,gldzmFeatures2Dmrg,FB,--,--,--
+grey-level distance zone matrix,high grey level zone emphasis gldzm,DZM,2.5D,2D,VMDZ,--,62GR,gldzmFeatures2Dmrg,FB,--,--,--
+grey-level distance zone matrix,small distance low grey level emphasis gldzm,DZM,2.5D,2D,VMDZ,--,62GR,gldzmFeatures2Dmrg,FB,--,--,--
+grey-level distance zone matrix,small distance high grey level emphasis gldzm,DZM,2.5D,2D,VMDZ,--,62GR,gldzmFeatures2Dmrg,FB,--,--,--
+grey-level distance zone matrix,large distance low grey level emphasis gldzm,DZM,2.5D,2D,VMDZ,--,62GR,gldzmFeatures2Dmrg,FB,--,--,--
+grey-level distance zone matrix,large distance high grey level emphasis gldzm,DZM,2.5D,2D,VMDZ,--,62GR,gldzmFeatures2Dmrg,FB,--,--,--
+grey-level distance zone matrix,grey level non uniformity gldzm,DZM,2.5D,2D,VMDZ,--,62GR,gldzmFeatures2Dmrg,FB,--,--,--
+grey-level distance zone matrix,grey level non uniformity normalized gldzm,DZM,2.5D,2D,VMDZ,--,62GR,gldzmFeatures2Dmrg,FB,--,--,--
+grey-level distance zone matrix,zone distance non uniformity gldzm,DZM,2.5D,2D,VMDZ,--,62GR,gldzmFeatures2Dmrg,FB,--,--,--
+grey-level distance zone matrix,zone distance non uniformity normalized gldzm,DZM,2.5D,2D,VMDZ,--,62GR,gldzmFeatures2Dmrg,FB,--,--,--
+grey-level distance zone matrix,zone percentage gldzm,DZM,2.5D,2D,VMDZ,--,62GR,gldzmFeatures2Dmrg,FB,--,--,--
+grey-level distance zone matrix,grey level variance gldzm,DZM,2.5D,2D,VMDZ,--,62GR,gldzmFeatures2Dmrg,FB,--,--,--
+grey-level distance zone matrix,zone distance variance gldzm,DZM,2.5D,2D,VMDZ,--,62GR,gldzmFeatures2Dmrg,FB,--,--,--
+grey-level distance zone matrix,zone distance entropy gldzm,DZM,2.5D,2D,VMDZ,--,62GR,gldzmFeatures2Dmrg,FB,--,--,--
+grey-level distance zone matrix,small distance emphasis gldzm,DZM,3D,3D,VMDZ,--,K0B0,gldzmFeatures3D,FB,--,--,--
+grey-level distance zone matrix,large distance emphasis gldzm,DZM,3D,3D,VMDZ,--,K0B0,gldzmFeatures3D,FB,--,--,--
+grey-level distance zone matrix,low grey level zone emphasis gldzm,DZM,3D,3D,VMDZ,--,K0B0,gldzmFeatures3D,FB,--,--,--
+grey-level distance zone matrix,high grey level zone emphasis gldzm,DZM,3D,3D,VMDZ,--,K0B0,gldzmFeatures3D,FB,--,--,--
+grey-level distance zone matrix,small distance low grey level emphasis gldzm,DZM,3D,3D,VMDZ,--,K0B0,gldzmFeatures3D,FB,--,--,--
+grey-level distance zone matrix,small distance high grey level emphasis gldzm,DZM,3D,3D,VMDZ,--,K0B0,gldzmFeatures3D,FB,--,--,--
+grey-level distance zone matrix,large distance low grey level emphasis gldzm,DZM,3D,3D,VMDZ,--,K0B0,gldzmFeatures3D,FB,--,--,--
+grey-level distance zone matrix,large distance high grey level emphasis gldzm,DZM,3D,3D,VMDZ,--,K0B0,gldzmFeatures3D,FB,--,--,--
+grey-level distance zone matrix,grey level non uniformity gldzm,DZM,3D,3D,VMDZ,--,K0B0,gldzmFeatures3D,FB,--,--,--
+grey-level distance zone matrix,grey level non uniformity normalized gldzm,DZM,3D,3D,VMDZ,--,K0B0,gldzmFeatures3D,FB,--,--,--
+grey-level distance zone matrix,zone distance non uniformity gldzm,DZM,3D,3D,VMDZ,--,K0B0,gldzmFeatures3D,FB,--,--,--
+grey-level distance zone matrix,zone distance non uniformity normalized gldzm,DZM,3D,3D,VMDZ,--,K0B0,gldzmFeatures3D,FB,--,--,--
+grey-level distance zone matrix,zone percentage gldzm,DZM,3D,3D,VMDZ,--,K0B0,gldzmFeatures3D,FB,--,--,--
+grey-level distance zone matrix,grey level variance gldzm,DZM,3D,3D,VMDZ,--,K0B0,gldzmFeatures3D,FB,--,--,--
+grey-level distance zone matrix,zone distance variance gldzm,DZM,3D,3D,VMDZ,--,K0B0,gldzmFeatures3D,FB,--,--,--
+grey-level distance zone matrix,zone distance entropy gldzm,DZM,3D,3D,VMDZ,--,K0B0,gldzmFeatures3D,FB,--,--,--
+neighbouring grey level dependence matrix,low dependence emphasis,LDM,2D,2D,REK0,--,8QNN,ngldmFeatures2Davg,FB,--,--,--
+neighbouring grey level dependence matrix,high dependence emphasis,LDM,2D,2D,REK0,--,8QNN,ngldmFeatures2Davg,FB,--,--,--
+neighbouring grey level dependence matrix,low grey level count emphasis,LDM,2D,2D,REK0,--,8QNN,ngldmFeatures2Davg,FB,--,--,--
+neighbouring grey level dependence matrix,high grey level count emphasis,LDM,2D,2D,REK0,--,8QNN,ngldmFeatures2Davg,FB,--,--,--
+neighbouring grey level dependence matrix,low dependence low grey level emphasis,LDM,2D,2D,REK0,--,8QNN,ngldmFeatures2Davg,FB,--,--,--
+neighbouring grey level dependence matrix,low dependence high grey level emphasis,LDM,2D,2D,REK0,--,8QNN,ngldmFeatures2Davg,FB,--,--,--
+neighbouring grey level dependence matrix,high dependence low grey level emphasis,LDM,2D,2D,REK0,--,8QNN,ngldmFeatures2Davg,FB,--,--,--
+neighbouring grey level dependence matrix,high dependence high grey level emphasis,LDM,2D,2D,REK0,--,8QNN,ngldmFeatures2Davg,FB,--,--,--
+neighbouring grey level dependence matrix,grey level non uniformity,LDM,2D,2D,REK0,--,8QNN,ngldmFeatures2Davg,FB,--,--,--
+neighbouring grey level dependence matrix,grey level non uniformity normalized,LDM,2D,2D,REK0,--,8QNN,ngldmFeatures2Davg,FB,--,--,--
+neighbouring grey level dependence matrix,dependence count non uniformity,LDM,2D,2D,REK0,--,8QNN,ngldmFeatures2Davg,FB,--,--,--
+neighbouring grey level dependence matrix,dependence count non uniformity normalized,LDM,2D,2D,REK0,--,8QNN,ngldmFeatures2Davg,FB,--,--,--
+neighbouring grey level dependence matrix,dependence count percentage,LDM,2D,2D,REK0,--,8QNN,ngldmFeatures2Davg,FB,--,--,--
+neighbouring grey level dependence matrix,grey level variance,LDM,2D,2D,REK0,--,8QNN,ngldmFeatures2Davg,FB,--,--,--
+neighbouring grey level dependence matrix,dependence count variance,LDM,2D,2D,REK0,--,8QNN,ngldmFeatures2Davg,FB,--,--,--
+neighbouring grey level dependence matrix,dependence count entropy,LDM,2D,2D,REK0,--,8QNN,ngldmFeatures2Davg,FB,--,--,--
+neighbouring grey level dependence matrix,dependence count energy,LDM,2D,2D,REK0,--,8QNN,ngldmFeatures2Davg,FB,--,--,--
+neighbouring grey level dependence matrix,low dependence emphasis,LDM,2.5D,2D,REK0,--,62GR,ngldmFeatures2Dmrg,FB,--,--,--
+neighbouring grey level dependence matrix,high dependence emphasis,LDM,2.5D,2D,REK0,--,62GR,ngldmFeatures2Dmrg,FB,--,--,--
+neighbouring grey level dependence matrix,low grey level count emphasis,LDM,2.5D,2D,REK0,--,62GR,ngldmFeatures2Dmrg,FB,--,--,--
+neighbouring grey level dependence matrix,high grey level count emphasis,LDM,2.5D,2D,REK0,--,62GR,ngldmFeatures2Dmrg,FB,--,--,--
+neighbouring grey level dependence matrix,low dependence low grey level emphasis,LDM,2.5D,2D,REK0,--,62GR,ngldmFeatures2Dmrg,FB,--,--,--
+neighbouring grey level dependence matrix,low dependence high grey level emphasis,LDM,2.5D,2D,REK0,--,62GR,ngldmFeatures2Dmrg,FB,--,--,--
+neighbouring grey level dependence matrix,high dependence low grey level emphasis,LDM,2.5D,2D,REK0,--,62GR,ngldmFeatures2Dmrg,FB,--,--,--
+neighbouring grey level dependence matrix,high dependence high grey level emphasis,LDM,2.5D,2D,REK0,--,62GR,ngldmFeatures2Dmrg,FB,--,--,--
+neighbouring grey level dependence matrix,grey level non uniformity,LDM,2.5D,2D,REK0,--,62GR,ngldmFeatures2Dmrg,FB,--,--,--
+neighbouring grey level dependence matrix,grey level non uniformity normalized,LDM,2.5D,2D,REK0,--,62GR,ngldmFeatures2Dmrg,FB,--,--,--
+neighbouring grey level dependence matrix,dependence count non uniformity,LDM,2.5D,2D,REK0,--,62GR,ngldmFeatures2Dmrg,FB,--,--,--
+neighbouring grey level dependence matrix,dependence count non uniformity normalized,LDM,2.5D,2D,REK0,--,62GR,ngldmFeatures2Dmrg,FB,--,--,--
+neighbouring grey level dependence matrix,dependence count percentage,LDM,2.5D,2D,REK0,--,62GR,ngldmFeatures2Dmrg,FB,--,--,--
+neighbouring grey level dependence matrix,grey level variance,LDM,2.5D,2D,REK0,--,62GR,ngldmFeatures2Dmrg,FB,--,--,--
+neighbouring grey level dependence matrix,dependence count variance,LDM,2.5D,2D,REK0,--,62GR,ngldmFeatures2Dmrg,FB,--,--,--
+neighbouring grey level dependence matrix,dependence count entropy,LDM,2.5D,2D,REK0,--,62GR,ngldmFeatures2Dmrg,FB,--,--,--
+neighbouring grey level dependence matrix,dependence count energy,LDM,2.5D,2D,REK0,--,62GR,ngldmFeatures2Dmrg,FB,--,--,--
+neighbouring grey level dependence matrix,low dependence emphasis,LDM,3D,3D,REK0,--,K0B0,ngldmFeatures3D,FB,--,--,--
+neighbouring grey level dependence matrix,high dependence emphasis,LDM,3D,3D,REK0,--,K0B0,ngldmFeatures3D,FB,--,--,--
+neighbouring grey level dependence matrix,low grey level count emphasis,LDM,3D,3D,REK0,--,K0B0,ngldmFeatures3D,FB,--,--,--
+neighbouring grey level dependence matrix,high grey level count emphasis,LDM,3D,3D,REK0,--,K0B0,ngldmFeatures3D,FB,--,--,--
+neighbouring grey level dependence matrix,low dependence low grey level emphasis,LDM,3D,3D,REK0,--,K0B0,ngldmFeatures3D,FB,--,--,--
+neighbouring grey level dependence matrix,low dependence high grey level emphasis,LDM,3D,3D,REK0,--,K0B0,ngldmFeatures3D,FB,--,--,--
+neighbouring grey level dependence matrix,high dependence low grey level emphasis,LDM,3D,3D,REK0,--,K0B0,ngldmFeatures3D,FB,--,--,--
+neighbouring grey level dependence matrix,high dependence high grey level emphasis,LDM,3D,3D,REK0,--,K0B0,ngldmFeatures3D,FB,--,--,--
+neighbouring grey level dependence matrix,grey level non uniformity,LDM,3D,3D,REK0,--,K0B0,ngldmFeatures3D,FB,--,--,--
+neighbouring grey level dependence matrix,grey level non uniformity normalized,LDM,3D,3D,REK0,--,K0B0,ngldmFeatures3D,FB,--,--,--
+neighbouring grey level dependence matrix,dependence count non uniformity,LDM,3D,3D,REK0,--,K0B0,ngldmFeatures3D,FB,--,--,--
+neighbouring grey level dependence matrix,dependence count non uniformity normalized,LDM,3D,3D,REK0,--,K0B0,ngldmFeatures3D,FB,--,--,--
+neighbouring grey level dependence matrix,dependence count percentage,LDM,3D,3D,REK0,--,K0B0,ngldmFeatures3D,FB,--,--,--
+neighbouring grey level dependence matrix,grey level variance,LDM,3D,3D,REK0,--,K0B0,ngldmFeatures3D,FB,--,--,--
+neighbouring grey level dependence matrix,dependence count variance,LDM,3D,3D,REK0,--,K0B0,ngldmFeatures3D,FB,--,--,--
+neighbouring grey level dependence matrix,dependence count entropy,LDM,3D,3D,REK0,--,K0B0,ngldmFeatures3D,FB,--,--,--
+neighbouring grey level dependence matrix,dependence count energy,LDM,3D,3D,REK0,--,K0B0,ngldmFeatures3D,FB,--,--,--
