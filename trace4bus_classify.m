@@ -1,78 +1,14 @@
 function out = trace4bus_classify(app)
-
-    if strcmpi(app.answer1,'Yes')
-        app.th = 0.50;
-    else
-        app.th = 1-0.77;
-    end
+    %DeepTrace Technologies S.R.L. (c) - Trace4BUS
+    %code for machine learning classification starting from radiomic features array 
+    out = [];
     output = app.modello.output;
     results = app.modello.results;
     K = app.modello.cv.k;
     bestmodel = app.modello.bestmodel;
-    rad_settings = app.modello.output.rad_settings;
-    [ss__data, ~, batch] = t4__vol2radiomicsTOOL__alg(app.dicm_fig,app.temp.mask2,...
-    app.img__type, app.info, rad_settings);
-    ss__data = double(ss__data);
-    output.sstest__fullradiomics__noclinical = ss__data;
-    % Check for clinical features
-    clin=0;
-    for i = 1:size(output.feature__specs,1)
-        fam=output.feature__specs{i,1};
-        if strcmpi(fam,'clinical')
-            clin=clin+1;
-            clin_feat{1,clin}=output.feature__specs{i,2};
-        end
-    end
-
-    if clin>0
-        answers=0;
-        while answers<1
-            answers=1;
-            prompt = clin_feat;
-            dlgtitle = 'Clinical features';
-            dims = [1 35];
-        %     definput = {'0','hsv'};
-            answer = inputdlg(prompt,dlgtitle,dims);
-            if ~isempty(answer)
-                for i = 1:length(answer)
-                    feat_name=clin_feat{1,i};
-                    k=strfind(feat_name,'-');
-                    k1=strfind(feat_name,'[');
-                    k2=strfind(feat_name,']');
-                    minim=str2double(feat_name(k1(1)+1:k(1)-1));
-                    maxim=str2double(feat_name(k(1)+1:k2(1)-1));
-                    if isempty(answer{i,1}) || isnan(str2double(answer{i,1}))
-                        answers=0;
-                    else
-                        if str2double(answer{i,1})<minim || str2double(answer{i,1})>maxim
-                            answers=0;
-                        end
-                    end
-                end
-                if answers==0
-                    msg='Please fill all fields with values compliant with ranges';
-                    f = errordlg(msg);
-                    waitfor(f)
-                end
-            else
-                msg='Please fill all fields with values compliant with ranges';
-                f = errordlg(msg);
-                waitfor(f)
-            end
-
-        end
-        n_feat_clin=length(answer);
-        for i=1:n_feat_clin
-            answer2(i)=str2double(answer{i,1});
-        end
-        ss__data(1,end+1:end+n_feat_clin)=answer2;
-    end
-
-    % Remove non-stable features (PERTURBATIONS)
-    if results(1,1).params(1,1).perturbation.flag == 1
-        ss__data = ss__data(:, stable__features);
-    end
-
+    batch = app.temp_data.batch;
+    ss__data = app.temp_data.ss__data;
+    
     for iter = 1:size(results, 1)
         for outerk = 1:K
             for innerk = 1:K
@@ -129,6 +65,18 @@ function out = trace4bus_classify(app)
 
 %     cv__scores = scores;
     % predicted__score = round(mean(mean(mean(scores))));
+    
+    if startsWith(batch,'ESAOTE')
+        temp_th = 0.198;
+    else
+        temp_th = 0.172;
+    end
+    if app.malign__zero
+        app.th = 0.50;
+    else
+        app.th = temp_th;
+    end
+    
     predicted__score = (mean(mean(mean(pprob))) < app.th);
     if predicted__score == 0
         predicted__pprob = mean(mean(mean(pprob)));
@@ -150,4 +98,79 @@ function out = trace4bus_classify(app)
     out.classification = predicted__diagnosis;
     out.class = predicted__score;
     out.pprob = predicted__pprob;
-        
+    
+    
+    
+    
+    
+    if app.malign__zero
+          if out.class == 0
+              out.b_class = 'B3';
+          else
+              out.b_class = 'B2';
+          end
+    else
+        if out.class == 0
+            if out.pprob <= 0.9
+                out.b_class = 'B4';
+            else
+                out.b_class = 'B5';
+            end
+        else
+            out.b_class = 'B3';
+        end
+    end
+    
+    
+    
+%if output.class == 0
+%     switch app.answer1
+%     case 'Yes'
+%         switch app.answer2
+%             case 'Yes' % 0% di malignancy with second opinion
+% %                 app.testo = 'The breast mass has been predicted to have >0% likelihood of malignancy: short-interval follow-up or continuous surveillance is suggested.';
+%                 app.testo = 'The breast mass has been predicted to belong to BI-RADS 3 category (between 0% and 2% likelihood of malignancy): short-interval follow-up or continuous surveillance is suggested.';
+%                 set(handles.testo_save, 'string',app.testo);
+%                 app.pdf__path = trace4bus__testreport(app.testo,app.sbj_name,app.Path_Name,app.second);
+%             case 'No' % 0% di malignancy without second opinion
+%                 
+%         end
+%     case 'No'
+%         switch app.answer2
+%             case 'Yes' % >0% di malignancy with second opinion
+%                 if output.pprob <= 0.9
+%                     app.testo = 'The breast mass has been predicted to belong to BI-RADS 4 category (between 2% and 95% likelihood of malignancy): tissue diagnosis is suggested.';
+%                 else
+%                     app.testo = 'The breast mass has been predicted to belong to BI-RADS 5 category (more than 95% likelihood of malignancy): tissue diagnosis is suggested.';
+%                 end
+% %                 app.testo = 'The breast mass has been predicted to have >2% likelihood of malignancy: tissue diagnosis is suggested.';
+%                 set(handles.testo_save, 'string',app.testo);
+%                 app.pdf__path = trace4bus__testreport(app.testo,app.sbj_name,app.Path_Name,app.second);
+%             case 'No' % >0% di malignancy without second opinion
+%                 
+%         end
+%     end
+% else
+%     switch app.answer1
+%     case 'Yes'
+%         switch app.answer2
+%             case 'Yes' % 0% di malignancy with second opinion
+% %                 app.testo = 'The breast mass has been predicted to have 0% likelihood of malignancy.';
+%                 app.testo = 'The breast mass has been predicted to belong to BI-RADS 2 category (0% likelihood of malignancy).';
+%                 set(handles.testo_save, 'string',app.testo);
+%                 app.pdf__path = trace4bus__testreport(app.testo,app.sbj_name,app.Path_Name,app.second);
+%             case 'No' % 0% di malignancy without second opinion
+%                 
+%         end
+%     case 'No'
+%         switch app.answer2
+%             case 'Yes' % >0% di malignancy with second opinion
+% %                 app.testo = 'The breast mass has been predicted to have <2% likelihood of malignancy: short-interval follow-up or continuous surveillance is suggested.';
+%                 app.testo = 'The breast mass has been predicted to belong to BI-RADS 3 category (between 0% and 2% likelihood of malignancy): short-interval follow-up or continuous surveillance is suggested.';
+%                 set(handles.testo_save, 'string',app.testo);
+%                 app.pdf__path = trace4bus__testreport(app.testo,app.sbj_name,app.Path_Name,app.second);
+%             case 'No' % >0% di malignancy without second opinion
+%                 
+%         end
+%     end
+% end

@@ -271,9 +271,18 @@ function output = identify_load_file(app)
                 %data modality not recognized
             end
         else
+            whole_path = [];
             try output.info = dicominfo(fullfile(app.path, app.file));
+                whole_path = fullfile(app.path, app.file);
+            catch
+                try output.info = dicominfo(fullfile(app.file));
+                    whole_path = app.file;
+                catch
+                end
+            end
+            if ~isempty(whole_path)
                 if strcmp(app.output_req, 'volume')
-                    output.volume = dicomread(fullfile(app.path, app.file));
+                    output.volume = dicomread(whole_path);
                     try output.dx(1,1)=output.info.PixelSpacing(1);
                         output.dx(1,2)=output.info.PixelSpacing(2);
                         try output.dx(1,3)=output.info.SliceThickness;
@@ -295,7 +304,7 @@ function output = identify_load_file(app)
                     catch
                         output.manuf = 'unknown';
                     end
-                    
+
                 elseif strcmp(app.output_req, 'nii')
                     nifti_path = strcat(app.path,'\nifti');
                     mkdir__ifnotexist(nifti_path);
@@ -312,8 +321,6 @@ function output = identify_load_file(app)
                 else
                     %other save
                 end
-            catch
-                %data modality not recognized
             end
         end
     end

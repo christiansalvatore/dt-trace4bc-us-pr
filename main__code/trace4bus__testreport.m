@@ -1,5 +1,5 @@
 % function trace4bus__testreport(out_risk, patient__name, path_save, second)
-function file_name = trace4bus__testreport(out_risk, patient__name, path_save, second)
+function file_name = trace4bus__testreport(out_risk, patient__name, path_save)
 % TRACE4AD © 2019 DeepTrace Technologies S.R.L.
 
 makeDOMCompilable(); 
@@ -78,15 +78,16 @@ makeDOMCompilable();
 %     blankline(rpt,5); 
 
 % Add paragraph
-if second == 0
-    prg = Paragraph("USI image has been evaluated as a ");
-elseif second == 1
-    prg = Paragraph("USI image has been classified as a ");
-end
+% if second == 0
+%     prg = Paragraph("USI image has been evaluated as a ");
+% elseif second == 1
+%     prg = Paragraph("USI image has been classified as a ");
+% end
 
-txt = lower(out_risk);
+prg = Paragraph(out_risk);
+% txt = lower(out_risk);
 
-append(prg,txt);
+% append(prg,txt);
 % txt = Text(" of MALIGNANCY");%, with ");
 % append(prg,txt);
 % probability = round(100 * input.results.results.pprob);
