@@ -100,6 +100,39 @@ add(rpt,prg);
 % Add blank line
     blankline(rpt,10);
 
+    title = Heading(1,LinkTarget('mg'));
+%         if input(2).rapp<1
+%             a=imread(input(2).elab_name);
+%             a=fliplr(a);
+%             imwrite(a,input(2).elab_name);
+%     %         append(title,"Mammography of left breast: the image has been rescaled to visually enhance the ratio of dense versus non-dense tissues");
+%             append(title,"Mammography of left breast: rescaled intensities to visually enhance the ratio of dense versus non-dense tissues");
+%         else
+    %         append(title,"Mammography of right breast: the image has been rescaled to visually enhance the ratio of dense versus non-dense tissues");
+            append(title,"US native image (left) and with manually drawn ROI of the breast mass (right)");
+%         end
+        title.Style = {HAlign('left'), Italic, FontFamily('Raleway'), FontSize('12')};
+        add(rpt,title);
+
+        images{1} = Image(strcat(path_save,'volumes\image_nomask.png'));
+        images{1}.Style = {Width('3.1in'), HAlign('left')};
+        images{2} = Image(strcat(path_save,'volumes\image_mask.png'));
+        images{2}.Style = {Width('3.1in'), HAlign('left')};
+%         images{1} = Image(input(2).elab_name);
+%         images{1}.Style = {Width('3.1in'), HAlign('center')};
+        
+                t = Table({images{1}, images{2}});
+            t.Border = 'none';
+            t.TableEntriesInnerMargin = '1pt';
+            t.Style = {HAlign('left')};
+            add(rpt,t);
+%         t = Table(images(1));
+%             t.Border = 'none';
+%             t.TableEntriesInnerMargin = '1pt';
+%             t.Style = {HAlign('center')};
+%             add(rpt,t);
+    
+    
 % if out_risk.warn == 1
 %     prg = Paragraph("IMPORTANT: This result does not take into consideration the CA-125 levels, which were not provided by the user. CA-125 levels equal to or higher than ");
 % 	prg.Style = {HAlign('justify'), FontSize('14')};

@@ -101,6 +101,9 @@ guidata(hObject, handles);
 %     while a > 0
         drawnow();
 %     end
+image_name = fullfile(mkdir__ifnotexist(fullfile(...
+                app1.temp.root, 'volumes')), 'image_nomask');
+                export_fig(handles.slice_fig, image_name, '-png');
 waitfor(handles.output);
 
 
@@ -232,8 +235,9 @@ if ~isempty(app1.temp.mask)
                 mask_name = fullfile(mkdir__ifnotexist(fullfile(...
                 app1.temp.root, 'volumes')), 'mask.dcm');
                 dicomwrite(app1.temp.mask2,mask_name,app1.temp.info,'CreateMode', 'copy');
-                
-                
+                image_name = fullfile(mkdir__ifnotexist(fullfile(...
+                app1.temp.root, 'volumes')), 'image_mask');
+                export_fig(handles.slice_fig, image_name, '-png');
                 app1.output = app1.temp.mask2;
                 
                 
