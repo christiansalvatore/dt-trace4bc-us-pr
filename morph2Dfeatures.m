@@ -1,4 +1,4 @@
-function vect_val = morph2Dfeatures(vol__path, mask__path,pix_dim)
+function out = morph2Dfeatures(vol__path, mask__path,pix_dim)
 
 % volnii = load_nii(vol__path);
 vol = vol__path;
@@ -124,6 +124,64 @@ contorno_box=((max(coord(:,1))-min(coord(:,1))+1)*2+ ...
     (max(coord(:,2))-min(coord(:,2))+1)*2)*pix_dim(1,1);
 Contorno_density=Contorno/contorno_box;%%%%%%
 vect_val(10,1)=Contorno_density;
+
+out.vect_val = vect_val;
+
+%extra moph
+CC = bwconncomp(mask);
+    if CC.NumObjects>1
+        max_area=0;
+        for j = 1:length(CC.PixelIdxList)
+            if length(CC.PixelIdxList{j})>=max_area
+                max_area = length(CC.PixelIdxList{j});
+                index_max_area = j;
+            else
+                mask(CC.PixelIdxList{j})=0;
+            end
+        end
+        CC = bwconncomp(mask);
+        for j = 1:length(CC.PixelIdxList)
+            if length(CC.PixelIdxList{j})>=max_area
+                max_area = length(CC.PixelIdxList{j});
+                index_max_area = j;
+            else
+                mask(CC.PixelIdxList{j})=0;
+            end
+        end
+        CC = bwconncomp(mask);
+    end
+stats = regionprops(CC,'Circularity',...
+    'MajorAxisLength','MinorAxisLength',...
+    'Orientation', 'Solidity','Eccentricity','Extent');
+proiez_x_major_mm = (stats.MajorAxisLength*cos(deg2rad(abs(stats.Orientation))))*pix_dim(1,1);
+proiez_y_major_mm = (stats.MajorAxisLength*sin(deg2rad(abs(stats.Orientation))))*pix_dim(1,2);
+stats.MajorAxisLength_mm = hypot(proiez_x_major_mm,proiez_y_major_mm);
+
+
+proiez_x_minor_mm = (stats.MinorAxisLength*cos(deg2rad(abs(90-stats.Orientation))))*pix_dim(1,1);
+proiez_y_minor_mm = (stats.MinorAxisLength*sin(deg2rad(abs(90-stats.Orientation))))*pix_dim(1,2);
+stats.MinorAxisLength_mm = hypot(proiez_x_minor_mm,proiez_y_minor_mm);
+
+
+out.other_morph(1,1) = Max_diam;
+out.other_morph(1,2) = Area;
+out.other_morph(1,3) = stats.Orientation;
+out.other_morph(1,4) = stats.Solidity;
+out.other_morph(1,5) = stats.Eccentricity;
+if stats.Orientation > -45 && stats.Orientation < 45
+    out.other_morph(1,6) = 0; % paralel
+else
+    out.other_morph(1,6) = 1; % normal
+end
+if stats.Solidity < 0.88
+    out.other_morph(1,7) = 2; % irregular
+else
+    if stats.Eccentricity < 0.4 
+        out.other_morph(1,7) = 0; % circular
+    else
+        out.other_morph(1,7) = 1; % oval
+    end
+end
 
 % try racat_table = readtable(strcat(path_exe,'\main_code\functions\RaCat\dataframe_IBSI__RaCaT__nomenclature_mam.csv'));
 % catch

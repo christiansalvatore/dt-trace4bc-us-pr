@@ -33,7 +33,8 @@ volObjInit.data = single(volObjInit.data);
 roiObjInit.data = single(roiObjInit.data);
 isthemask = unique(roiObjInit.data);
 if sum(size(isthemask))==2
-    output = [];
+    output.rad__features = [];
+    output.shape__feat = [];
     return
 end
 
@@ -62,16 +63,18 @@ boxString = 'full';
 if is3D
     morpho_struct = [];
 else
-    morpho_struct = morph2Dfeatures(volume,mask,rad_settings.out_pix_dim);
+    all_morph = morph2Dfeatures(volume,mask,rad_settings.out_pix_dim);
+    morpho_struct = all_morph.vect_val;
+    output.shape__feat = all_morph.other_morph;
 end
-
 [radiomics,scaleName] = computeRadiomics(volObjInit,roiObjInit,imParamScan,boxString,is3D);
 [radiomics_out,~] = structure2array(radiomics,scaleName,is3D);
-
-racat__features = structure_radiomics(morpho_struct,radiomics_out,img__type,is3D,rad_settings);
+rad__features = structure_radiomics(morpho_struct,radiomics_out,img__type,is3D,rad_settings);
 %             racat__features = racat_simplefeatextraction(vol, mask,...
 %                 img__type, patient__root);
-output = racat__features;
+output.rad__features = rad__features;
+
+
 
 
 % current__features = double((cell2mat(racat__features(:,11)))');

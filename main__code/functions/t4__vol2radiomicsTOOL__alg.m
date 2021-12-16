@@ -35,8 +35,8 @@ function [data, N, batch, varargout] = t4__vol2radiomicsTOOL__alg(volume, masche
         input.is3D = is3D;
         input.rad_settings = rad_settings;
         % Extract radiomic features
-        radiomic_tool__features = radiomic_features_extraction(input);
-
+        out1 = radiomic_features_extraction(input);
+        radiomic_tool__features = out1.rad__features;
         % Assign features to output matrix
         data(1,:) = double((cell2mat(radiomic_tool__features(:,11)))');
         radiomic_tool__featspecs = radiomic_tool__features(:, [1:10 12]);
@@ -57,6 +57,11 @@ function [data, N, batch, varargout] = t4__vol2radiomicsTOOL__alg(volume, masche
 
     % Varargout
     varargout{1} = radiomic_tool__featspecs;
+    try
+        varargout{2} = out1.shape__feat;
+    catch
+        varargout{2} = [];
+    end
 %     varargout{2} = mask__;  
 %     varargout{3} = radiomic_tool__featspecs;
 %     try

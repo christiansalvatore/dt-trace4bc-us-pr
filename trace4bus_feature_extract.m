@@ -7,7 +7,7 @@ function out = trace4bus_feature_extract(app)
 %     K = app.modello.cv.k;
 %     bestmodel = app.modello.bestmodel;
     rad_settings = app.modello.output.rad_settings;
-    [ss__data, ~, batch] = t4__vol2radiomicsTOOL__alg(app.dicm_fig,app.temp.mask2,...
+    [ss__data, ~, batch, ~, shape_feat] = t4__vol2radiomicsTOOL__alg(app.dicm_fig,app.temp.mask2,...
     app.img__type, app.info, rad_settings);
     
     ss__data = double(ss__data);
@@ -72,3 +72,4 @@ function out = trace4bus_feature_extract(app)
     end
     out.ss__data = ss__data;
     out.batch = batch;
+    out.shape_feat = shape_feat;
