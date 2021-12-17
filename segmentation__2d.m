@@ -58,8 +58,19 @@ guidata(hObject, handles);
 
             % Change figure icon
             change__figicon(handles.output);
+m1 = uimenu('Text','Documentation');
+mitem1 = uimenu(m1,'Text','User Manual');
+mitem1.MenuSelectedFcn = @UMSelected;
 
-    movegui(gcf,'center');
+mitem2 = uimenu(m1,'Text','Technical Sheet');
+mitem2.MenuSelectedFcn = @TSSelected;
+
+mitem3 = uimenu(m1,'Text','Ultrasound Image Protocol');
+mitem3.MenuSelectedFcn = @UPSelected;
+
+mitem4 = uimenu(m1,'Text','Segmentation Procedure');
+mitem4.MenuSelectedFcn = @SPSelected;
+
     
     app1.temp.path = varargin{1};
     app1.temp.root = varargin{2};
@@ -120,6 +131,8 @@ function varargout = segmentation__2d_OutputFcn(hObject, eventdata, handles)
 function draw_roi_Callback(hObject, eventdata, handles)
     global app1
     global hf
+    a=handles.slice_fig.XLim;
+    b=handles.slice_fig.YLim;
     try
         app1.temp.mask = [];
         % Re-Plot
@@ -129,8 +142,11 @@ function draw_roi_Callback(hObject, eventdata, handles)
         hf = imshow(app1.figura);
 %         hf = imagesc(app1.figura);
         axis image
-        axis off    
+        axis off
+    catch
     end
+    handles.slice_fig.XLim=a;
+    handles.slice_fig.YLim=b;
     app1.h = drawfreehand(handles.slice_fig, 'FaceAlpha',0, 'Multiclick', 1, 'DrawingArea', 'auto','LineWidth',1,'Color','y');
     addlistener(app1.h,'ROIMoved',@allevents_h);
     app1.temp.mask = uint8(createMask(app1.h));
@@ -138,6 +154,7 @@ function draw_roi_Callback(hObject, eventdata, handles)
         xy.Center = [];
         xy.SemiAxes = [];
         xy.RotationAngle = [];
+    catch
     end
     xy.Position = app1.h.Position;
     app1.mask_pos = xy;
@@ -156,11 +173,15 @@ function delete_roi_Callback(hObject, eventdata, handles)
     % Re-Plot
 %     imshow(app1.temp.image, [], 'Parent', handles.slice_fig);
     global hf
+    a=handles.slice_fig.XLim;
+    b=handles.slice_fig.YLim;
     axes(handles.slice_fig);
 %     hf = imshow(app1.figura,[app1.zMin app1.zMax]);
     hf = imshow(app1.figura);
     axis image
     axis off
+    handles.slice_fig.XLim=a;
+    handles.slice_fig.YLim=b;
     set(handles.delete_roi, 'enable', 'off');
     set(handles.draw_roi, 'enable', 'on');
     set(handles.save_mask, 'enable', 'off');
@@ -237,7 +258,12 @@ if ~isempty(app1.temp.mask)
                 dicomwrite(app1.temp.mask2,mask_name,app1.temp.info,'CreateMode', 'copy');
                 image_name = fullfile(mkdir__ifnotexist(fullfile(...
                 app1.temp.root, 'volumes')), 'image_mask');
-                export_fig(handles.slice_fig, image_name, '-png');
+                tobe__exported = figure('Visible','off');
+                imshow(app1.figura);
+                app1.h2 = drawfreehand(gca, 'FaceAlpha',0, 'Position', app1.mask_pos.Position,'LineWidth',1,'Color','y');
+                app1.h2.InteractionsAllowed = 'none';
+                export_fig(tobe__exported, image_name, '-png');
+                close(tobe__exported);
                 app1.output = app1.temp.mask2;
                 
                 
@@ -361,4 +387,74 @@ function max_intensity_CreateFcn(hObject, eventdata, handles)
 % Hint: slider controls usually have a light gray background.
 if isequal(get(hObject,'BackgroundColor'), get(0,'defaultUicontrolBackgroundColor'))
     set(hObject,'BackgroundColor',[.9 .9 .9]);
+end
+
+
+function UMSelected(src,event)
+if isdeployed
+p = mfilename('fullpath');
+endout = regexp(p, filesep, 'split');
+for i = 1:size(endout,2)-1
+    if i == 1
+        path_exe = endout{1,1};
+    else
+        path_exe = strcat(path_exe, '/' ,endout{1,i});
+    end  
+end
+path_pdf = fullfile(path_exe, 'docs', 'TRACE4BUS__User_manual_en-it.pdf');
+system(['start "TRACE4BUS | User Manual" ','"', path_pdf,'"']);
+else
+system(['start "TRACE4BUS | User Manual" ','"', 'docs/TRACE4BUS__User_manual_en-it.pdf','"']);
+end
+
+
+function TSSelected(src,event)
+if isdeployed
+p = mfilename('fullpath');
+endout = regexp(p, filesep, 'split');
+for i = 1:size(endout,2)-1
+    if i == 1
+        path_exe = endout{1,1};
+    else
+        path_exe = strcat(path_exe, '/' ,endout{1,i});
+    end  
+end
+path_pdf = fullfile(path_exe, 'docs', 'TRACE4BUS__Technical_Sheet_en-it.pdf');
+system(['start "TRACE4BUS | Technical Sheet" ','"', path_pdf,'"']);
+else
+system(['start "TRACE4BUS | Technical Sheet" ','"', 'docs/TRACE4BUS__Technical_Sheet_en-it.pdf','"']);
+end
+
+function UPSelected(src,event)
+if isdeployed
+p = mfilename('fullpath');
+endout = regexp(p, filesep, 'split');
+for i = 1:size(endout,2)-1
+    if i == 1
+        path_exe = endout{1,1};
+    else
+        path_exe = strcat(path_exe, '/' ,endout{1,i});
+    end  
+end
+path_pdf = fullfile(path_exe, 'docs', 'TRACE4BUS__USI_protocol_en-it.pdf');
+system(['start "TRACE4BUS | USI protocol" ','"', path_pdf,'"']);
+else
+system(['start "TRACE4BUS | USI protocol" ','"', 'docs/TRACE4BUS__USI_protocol_en-it.pdf','"']);
+end
+
+function SPSelected(src,event)
+if isdeployed
+p = mfilename('fullpath');
+endout = regexp(p, filesep, 'split');
+for i = 1:size(endout,2)-1
+    if i == 1
+        path_exe = endout{1,1};
+    else
+        path_exe = strcat(path_exe, '/' ,endout{1,i});
+    end  
+end
+path_pdf = fullfile(path_exe, 'docs', 'TRACE4BUS__Segmentation_procedure_en-it.pdf');
+system(['start "TRACE4BUS | Segmentation procedure" ','"', path_pdf,'"']);
+else
+system(['start "TRACE4BUS | Segmentation procedure" ','"', 'docs/TRACE4BUS__Segmentation_procedure_en-it.pdf','"']);
 end

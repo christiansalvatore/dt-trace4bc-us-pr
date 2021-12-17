@@ -92,7 +92,7 @@ add(rpt,prg);
     blankline(rpt,10);   
     if ~isempty(extra_text)
         title = Heading(1,LinkTarget('mg'));
-        append(title,"Breast mass morphological features");
+        append(title,"BI-RADS DESCRIPTORS");
 
         title.Style = {HAlign('left'), Italic, FontFamily('Raleway'), FontSize('12')};
         add(rpt,title);
