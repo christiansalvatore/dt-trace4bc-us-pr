@@ -52,22 +52,22 @@ function check = reset__password(varargin)
                 save(license__fullpath,'last_date','-append');
                 now_date = last_date;
                 % Find items
-                index = find(strcmp(auth.login(1,:),usr__));
+                index = find(strcmp(auth_use.login(1,:),usr__));
 
                 % Associate password
-                pwd = auth.pwd{1,index};
+                pwd = auth_use.pwd{1,index};
 
                 % Compare
                 if strcmp(pwd, pwd__)
-                    auth.pwd{1,index} = new__pwd;
+                    auth_use.pwd{1,index} = new__pwd;
                     if orig == 1
-                        auth.pwd{2,index} = 1;
+                        auth_use.pwd{2,index} = 1;
                     else
-                        auth.pwd{2,index} = 0;
+                        auth_use.pwd{2,index} = 0;
                     end
-                    auth.pwd{3,index} = 0;
-                    auth.pwd{4,index} = now_date + calmonths(security_settings.expiration);
-                    save(license__fullpath,'auth','-append');
+                    auth_use.pwd{3,index} = 0;
+                    auth_use.pwd{4,index} = now_date + calmonths(security_settings.expiration);
+                    save(license__fullpath,'auth_use','-append');
                     log{next_log,1} = now_date;
                     log{next_log,2} = usr__;
                     log{next_log,3} = {'successful change password'};

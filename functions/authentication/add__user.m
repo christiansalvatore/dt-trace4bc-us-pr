@@ -24,7 +24,7 @@ function check = add__user(varargin)
         next_log = size(log,1)+1;
 
         % Find items
-        index = find(strcmp(auth.login(1,:),new__usr));
+        index = find(strcmp(auth_use.login(1,:),new__usr));
         
         %check password length
         if length(new__pwd)<security_settings.min_length
@@ -68,32 +68,32 @@ function check = add__user(varargin)
                 save(license__fullpath,'last_date','-append');
                 now_date = last_date;
                 % Find items
-                index = find(strcmp(auth.login(1,:),usr__));
+                index = find(strcmp(auth_use.login(1,:),usr__));
 
                 % Associate password
-                pwd = auth.pwd{1,index};
+                pwd = auth_use.pwd{1,index};
 
                 % Compare
                 if strcmp(pwd, pwd__)
-                    new__index = size(auth.login,2) + 1;
-                    auth.login{1,new__index} = new__usr;
+                    new__index = size(auth_use.login,2) + 1;
+                    auth_use.login{1,new__index} = new__usr;
                     if new__index<10
                         user_num=strcat('0',num2str(new__index-2));
                     else
                         user_num=strcat(num2str(new__index-2));
                     end
-                    auth.login{2,new__index} = user_num;
-                    auth.login(3,new__index) = auth.login(3,index);
-    %                 auth.pwd{new__index} = new__pwd;
-                    auth.pwd{1,new__index} = new__pwd;
-                    auth.pwd{2,new__index} = 1;
-                    auth.pwd{3,new__index} = 0;
+                    auth_use.login{2,new__index} = user_num;
+                    auth_use.login(3,new__index) = auth_use.login(3,index);
+    %                 auth_use.pwd{new__index} = new__pwd;
+                    auth_use.pwd{1,new__index} = new__pwd;
+                    auth_use.pwd{2,new__index} = 1;
+                    auth_use.pwd{3,new__index} = 0;
 
-                    auth.pwd{4,new__index} = now_date + calmonths(security_settings.expiration);
-                    auth.pwd{5,new__index} = now_date + calmonths(security_settings.expiration_acc);
+                    auth_use.pwd{4,new__index} = now_date + calmonths(security_settings.expiration);
+                    auth_use.pwd{5,new__index} = now_date + calmonths(security_settings.expiration_acc);
 
-                    auth.tag_button(:,new__index+1)=auth.tag_button(:,index+1);
-                    save(license__fullpath,'auth','-append');
+                    auth_use.tag_button(:,new__index+1)=auth_use.tag_button(:,index+1);
+                    save(license__fullpath,'auth_use','-append');
                     log{next_log,1} = now_date;
                     log{next_log,2} = usr__;
                     log{next_log,3} = {sprintf('successful add user %s',new__usr)};
