@@ -1,4 +1,4 @@
-function [license__check, license__fullpath] = check__license(varargin)
+function [license__check, license__fullpath] = check__license__private(varargin)
 %UNTITLED Summary of this function goes here
 %   Detailed explanation goes here
 
@@ -26,7 +26,7 @@ function [license__check, license__fullpath] = check__license(varargin)
     env{4} = 'PROGRAMDATA';
     env{5} = 'HOMEDRIVE';
     final__path = 'trace4/application';
-    license = 'config__trace4BUS.mat';            
+    license = 'config_priv__trace4BUS.mat';            
 
     if license__check == 0
         root__path = license__abspath;

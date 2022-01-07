@@ -8,15 +8,18 @@ function [check,buttons_ok] = authentication(varargin)
     usr__ = varargin{1};
     pwd__ = varargin{2};
     license__fullpath = varargin{3};
-    
+    local_license = license__fullpath.local;
+    private_license = license__fullpath.private;
     % Load
-    load(license__fullpath);
+    local = load(local_license);
+    private = load(private_license);
+    log = local.log;
     next_log = size(log,1)+1;
-    if (counter.bus.testmodel>=counter.demomax.bus && counter.demomax.bus>0) %update per provare n classificazioni (se n>0)
-        check = -25;
-        buttons_ok=[];
-    else
-        mac_ok = checkmac_code(mac_value);
+%     if (counter.bus.testmodel>=counter.demomax.bus && counter.demomax.bus>0) %update per provare n classificazioni (se n>0)
+%         check = -25;
+%         buttons_ok=[];
+%     else
+        mac_ok = checkmac_code(private.mac_value);
         total_ok = 0;
         if mac_ok == 0
             waitfor(msgbox(sprintf('License error 21210904. Unrecognised hardware.\nIf the problem persists, please, contact the software provider.'),'License error','error'));
@@ -27,20 +30,25 @@ function [check,buttons_ok] = authentication(varargin)
             if annual_licenze == 1
                 date_times = web__datetime;
                 if ~isdatetime(date_times)
-                    [date_ok, last_date] = checkdate(last_date);
+                    [date_ok, local.last_date] = checkdate(local.last_date);
                 else
                     date_ok = 1;
-                    last_date = date_times;
+                    local.last_date = date_times;
                 end
 
                 if date_ok == 0
                     waitfor(msgbox(sprintf('License error 04012005.\nPlease, contact the software provider.'),'License error','error'));
                 else
-                    [license_year_ok,annual_licenses,anniversary,warnings] = checkyear(anniversary,annual_licenses,warnings,last_date);
+                    tot_annual_licenses = [private.annual_licenses,local.annual_licenses_count];
+                    [license_year_ok,tot_annual_licenses,local.anniversary,local.warnings] = checkyear(local.anniversary,tot_annual_licenses,local.warnings,local.last_date);
                     if license_year_ok == 0
                     else
                         total_ok = 1;
-                        save(license__fullpath,'annual_licenses','-append','anniversary','-append','warnings','-append','last_date','-append');
+                        annual_licenses_count = tot_annual_licenses(:,2);
+                        warnings = local.warnings;
+                        last_date = local.last_date;
+                        anniversary = local.anniversary;
+                        save(local_license,'annual_licenses_count','-append','anniversary','-append','warnings','-append','last_date','-append');
                     end
                 end
             else
@@ -49,6 +57,12 @@ function [check,buttons_ok] = authentication(varargin)
         end
 
         if total_ok == 1
+            auth.login = [private.auth.login,local.auth_use.login];
+            auth.pwd = [private.auth.pwd,local.auth_use.pwd];
+            auth_use.tag_button = local.auth_use.tag_button;
+            auth.tag_button = [private.auth.tag_button,local.auth_use.tag_button];
+            security_settings = local.security_settings;
+            security_settings.retrive = [private.security_settings.retrive,local.security_settings.retrive];
             % Find items
         %     index = find(contains(auth.login,usr__));
             index = find(strcmp(auth.login(1,:),usr__));
@@ -60,13 +74,13 @@ function [check,buttons_ok] = authentication(varargin)
                 log{next_log,2} = 'Unknown';
                 log{next_log,3} = {'error login username'};
             else
-                if auth.pwd{3,index} >= security_settings.max_error
+                if auth.pwd{3,index} >= local.security_settings.max_error
                     buttons_ok=[];
                     now_date = datetime('now');
                     log{next_log,1} = now_date;
                     log{next_log,2} = usr__;
                     log{next_log,3} = {'error login user suspended'};
-                    if index == 1
+                    if index == size(private.auth.login,2)+1
                         %superadmin error
                         ind = find([security_settings.retrive{:,3}] == 2);
                         if isempty(ind)
@@ -79,9 +93,13 @@ function [check,buttons_ok] = authentication(varargin)
                             if strcmp(pwd, pwd__)
                                 check = 3; % Success
                                 auth.pwd{3,index} = 0;
-                                security_settings.retrive(ind,3)={1};
-                                save(license__fullpath,'auth','-append');
-                                save(license__fullpath,'security_settings','-append');
+                                auth_use.pwd = auth.pwd(:,size(private.auth.login,2)+1:end);
+                                auth_use.login = auth.login(:,size(private.auth.login,2)+1:end);
+                                local.security_settings.retrive(ind,1)={1};
+                                
+                                security_settings = local.security_settings;
+                                save(license__fullpath.local,'auth_use','-append');
+                                save(license__fullpath.local,'security_settings','-append');
                                 log{next_log,1} = now_date;
                                 log{next_log,2} = usr__;
                                 log{next_log,3} = {'correct password reset'};
@@ -107,25 +125,29 @@ function [check,buttons_ok] = authentication(varargin)
 
                         check = 1; % Success
                         auth.pwd{3,index} = 0;
-                        save(license__fullpath,'auth','-append');
+                        auth_use.pwd = auth.pwd(:,size(private.auth.login,2)+1:end);
+                        auth_use.login = auth.login(:,size(private.auth.login,2)+1:end);
+                        save(license__fullpath.local,'auth_use','-append');
 
-                        date_times = web__datetime;
-                        if ~isdatetime(date_times)
-                            [date_ok, last_date] = checkdate(last_date);
-                        else
-                            date_ok = 1;
-                            last_date = date_times;
-                        end
+%                         date_times = web__datetime;
+%                         if ~isdatetime(date_times)
+%                             [date_ok, last_date] = checkdate(last_date);
+%                         else
+%                             date_ok = 1;
+%                             last_date = date_times;
+%                         end
                         if date_ok == 1
-                            save(license__fullpath,'last_date','-append');
+%                             save(license__fullpath,'last_date','-append');
 
-                            now_date = last_date;
+                            now_date = local.last_date;
 
                             try difference_days=between(now_date,auth.pwd{4,index},'Month');
                             catch
-                                auth.pwd{4,index} = now_date + calmonths(security_settings.expiration);
+                                auth.pwd{4,index} = now_date + calmonths(local.security_settings.expiration);
                                 difference_days=between(now_date,auth.pwd{4,index},'Month');
-                                save(license__fullpath,'auth','-append');
+                                auth_use.pwd = auth.pwd(:,size(private.auth.login,2)+1:end);
+                                auth_use.login = auth.login(:,size(private.auth.login,2)+1:end);
+                                save(license__fullpath.local,'auth_use','-append');
                             end
                             DateVector = datevec(difference_days);
                             if index >3
@@ -150,17 +172,19 @@ function [check,buttons_ok] = authentication(varargin)
                                 if strcmp(usr__,'superuser')
                                     check = -1;
                                     date_ok = 1;
-                                elseif index == 1
+                                elseif index == size(private.auth.login,2)+1
                                     check = -2;
                                     date_ok = 1;
-                                elseif index == 3
+                                elseif index == 2
                                     date_ok = 1;
                                 else
                                     try difference_days=between(now_date,auth.pwd{5,index},'Month');
                                     catch
-                                        auth.pwd{5,index} = now_date + calmonths(security_settings.expiration_acc);
+                                        auth.pwd{5,index} = now_date + calmonths(local.security_settings.expiration_acc);
                                         difference_days=between(now_date,auth.pwd{5,index},'Month');
-                                        save(license__fullpath,'auth','-append');
+                                        auth_use.pwd = auth.pwd(:,size(private.auth.login,2)+1:end);
+                                        auth_use.login = auth.login(:,size(private.auth.login,2)+1:end);
+                                        save(license__fullpath.local,'auth_use','-append');
                                     end
                                     DateVector = datevec(difference_days);
                                     if DateVector(2)<=0
@@ -188,8 +212,11 @@ function [check,buttons_ok] = authentication(varargin)
                                     log{next_log,1} = now_date;
                                     log{next_log,2} = usr__;
                                     log{next_log,3} = {'successful login'};
-                                    auth.pwd{5,index} = now_date + calmonths(security_settings.expiration_acc);
-                                    save(license__fullpath,'auth','-append');
+                                    auth.pwd{5,index} = now_date + calmonths(local.security_settings.expiration_acc);
+                                    auth_use.pwd = auth.pwd(:,size(private.auth.login,2)+1:end);
+                                    auth_use.login = auth.login(:,size(private.auth.login,2)+1:end);
+                                    save(license__fullpath.local,'auth_use','-append');
+%                                     save(license__fullpath,'auth','-append');
                                 else
                                     %expired account
                                     log{next_log,1} = now_date;
@@ -216,7 +243,7 @@ function [check,buttons_ok] = authentication(varargin)
     %                                 log{next_log,1} = now_date;
     %                                 log{next_log,2} = usr__;
     %                                 log{next_log,3} = {'successful login'};
-                                elseif index == 3
+                                elseif index == 2
                                     for i = 1:size(auth.tag_button,1)
                                         buttons_ok{i,1}=auth.tag_button{i,1};
                                         buttons_ok{i,2}=auth.tag_button{i,index+1};
@@ -249,7 +276,10 @@ function [check,buttons_ok] = authentication(varargin)
                     else
 
                         auth.pwd{3,index} = auth.pwd{3,index}+1;
-                        save(license__fullpath,'auth','-append');
+                        auth_use.pwd = auth.pwd(:,size(private.auth.login,2)+1:end);
+                        auth_use.login = auth.login(:,size(private.auth.login,2)+1:end);
+                        save(license__fullpath.local,'auth_use','-append');
+%                         save(license__fullpath,'auth','-append');
                         check = 40+auth.pwd{3,index}; % Error
                         buttons_ok=[];
                         now_date = datetime('now');
@@ -266,6 +296,7 @@ function [check,buttons_ok] = authentication(varargin)
             log{next_log,2} = 'Unknown';
             log{next_log,3} = {'error login system'};
         end
-        save(license__fullpath,'log','-append');
-    end
+        
+        save(license__fullpath.local,'log','-append');
+%     end
 end

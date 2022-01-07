@@ -70,7 +70,22 @@ add(rpt,prg);
 
 % Add blank line
     blankline(rpt,10);
+if contains(out_risk,'BI-RADS 2')
+    title = Heading(1,LinkTarget('mg'));
+    append(title,"US native image of the breast mass");
 
+        title.Style = {HAlign('left'), Italic, FontFamily('Raleway'), FontSize('12')};
+        add(rpt,title);
+
+        images{1} = Image(strcat(path_save,'volumes\image_nomask.png'));
+        images{1}.Style = {Width('3.1in'), HAlign('center')};
+    
+        t = Table(images(1)); 
+        t.Border = 'none';
+        t.TableEntriesInnerMargin = '1pt';
+        t.Style = {HAlign('center')};
+    add(rpt,t);
+else
     title = Heading(1,LinkTarget('mg'));
     append(title,"US native image (left) and with manually drawn ROI of the breast mass (right)");
 
@@ -88,6 +103,8 @@ add(rpt,prg);
             t.TableEntriesInnerMargin = '1pt';
             t.Style = {HAlign('left')};
             add(rpt,t);
+end
+    
 
     blankline(rpt,10);   
     if ~isempty(extra_text)
