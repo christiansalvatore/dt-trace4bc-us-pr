@@ -1,4 +1,4 @@
-function check = add__user(varargin)
+function check = add__user__sup(varargin)
 %UNTITLED2 Summary of this function goes here
 %   Detailed explanation goes here
 % auth.login{1} = 'user01';
@@ -11,9 +11,9 @@ function check = add__user(varargin)
 
     % Varargin
     usr__ = varargin{1};
-    pwd__ = varargin{2};
-    usr__ = crypting(usr__, 1, 0);
-    pwd__ = crypting(pwd__, 1, 0);
+%     pwd__ = varargin{2};
+%     usr__ = crypting(usr__, 1, 0);
+%     pwd__ = crypting(pwd__, 1, 0);
     license__fullpath = varargin{3};
     new__usr = varargin{4};
     new__pwd = varargin{5};
@@ -79,12 +79,12 @@ function check = add__user(varargin)
                 
                 % Find items
 %                 index = find(strcmp(auth_use.login(1,:),usr__));
-                index = find(cellfun(@(s) ~isempty(strfind(usr__,s)), auth_use.login(1,:)));
+                index = 1;%find(cellfun(@(s) ~isempty(strfind(usr__,s)), auth_use.login(1,:)));
                 % Associate password
-                pwd = auth_use.pwd{1,index};
+%                 pwd = auth_use.pwd{1,index};
 
                 % Compare
-                if strcmp(pwd, pwd__)
+%                 if strcmp(pwd, pwd__)
                     new__index = size(auth_use.login,2) + 1;
                     auth_use.login{1,new__index} = new__usr;
                     if new__index<10
@@ -111,9 +111,9 @@ function check = add__user(varargin)
                     log{next_log,3} = {sprintf('successful add user %s',new__usr)};
                     save(license__fullpath,'log','-append');
                     check = 1; % Success
-                else
-                    check = 0; % Username or password incorrect
-                end
+%                 else
+%                     check = 0; % Username or password incorrect
+%                 end
             else
                 now_date = datetime('now');
                 log{next_log,1} = now_date;
