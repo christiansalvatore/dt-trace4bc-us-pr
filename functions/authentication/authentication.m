@@ -180,13 +180,13 @@ function [check,buttons_ok] = authentication(varargin)
                                 date_ok = 1;
                             end
                             if date_ok == 1
-                                if strcmp(usr__,'superuser')
+                                if strcmp(crypting(usr__, 0, 0),'superuser')
                                     check = -1;
                                     date_ok = 1;
                                 elseif index == size(private.auth.login,2)+1
-                                    check = -2;
+                                    check = -2;%supadmin
                                     date_ok = 1;
-                                elseif index == 2
+                                elseif index == 2%demo
                                     date_ok = 1;
                                 else
                                     user_date1 = auth.pwd{5,index};

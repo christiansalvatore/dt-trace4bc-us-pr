@@ -9,10 +9,18 @@ if direction == 1
     if isdate
         input = char(input);
     end
-    output = aes.encrypt(input);
+    try
+        output = aes.encrypt(input);
+    catch
+        output = input;
+    end
 else
-    output = aes.decrypt(input);
-    if isdate
-        output = datetime(output);
+    try
+        output = aes.decrypt(input);
+        if isdate
+            output = datetime(output);
+        end
+    catch
+        output = input;
     end
 end

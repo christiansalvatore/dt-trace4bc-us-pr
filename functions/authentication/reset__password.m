@@ -56,14 +56,14 @@ function check = reset__password(varargin)
                 last_date = crypting(last_date, 1, 1);
                 save(license__fullpath,'last_date','-append');
                 % Find items
-                index = find(strcmp(auth_use.login(1,:),usr__));
-
+%                 index = find(strcmp(auth_use.login(1,:),usr__));
+                index = find(cellfun(@(s) ~isempty(strfind(usr__,s)), auth_use.login(1,:)));
                 % Associate password
                 pwd = auth_use.pwd{1,index};
 
                 % Compare
                 if strcmp(pwd, pwd__)
-                    auth_use.pwd{1,index} = new__pwd;
+                    auth_use.pwd{1,index} = crypting(new__pwd,1,0);
                     if orig == 1
                         auth_use.pwd{2,index} = 1;
                     else
