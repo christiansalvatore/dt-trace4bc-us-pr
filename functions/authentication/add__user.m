@@ -12,8 +12,8 @@ function check = add__user(varargin)
     % Varargin
     usr__ = varargin{1};
     pwd__ = varargin{2};
-    usr__ = crypting(usr__, 1, 0);
-    pwd__ = crypting(pwd__, 1, 0);
+%     usr__ = crypting(usr__, 1, 0);
+%     pwd__ = crypting(pwd__, 1, 0);
     license__fullpath = varargin{3};
     new__usr = varargin{4};
     new__pwd = varargin{5};
