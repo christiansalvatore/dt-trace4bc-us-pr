@@ -94,6 +94,7 @@ function check = add__user(varargin)
                     end
                     auth_use.login{2,new__index} = user_num;
                     auth_use.login(3,new__index) = auth_use.login(3,index);
+                    auth_use.login(4,new__index) = 1;
     %                 auth_use.pwd{new__index} = new__pwd;
                     auth_use.pwd{1,new__index} = new__pwd;
                     auth_use.pwd{2,new__index} = 1;

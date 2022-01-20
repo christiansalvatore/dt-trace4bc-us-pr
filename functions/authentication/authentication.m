@@ -222,6 +222,10 @@ function [check,buttons_ok] = authentication(varargin)
                                     end
                                     if auth.pwd{2,index} == 1
                                         check = 3;
+                                    else
+                                        if auth.login{4,index} == 1
+                                            check = 1.1;
+                                        end
                                     end
                                     log{next_log,1} = now_date;
                                     log{next_log,2} = usr__;
