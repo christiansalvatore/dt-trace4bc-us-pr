@@ -357,13 +357,13 @@ function allevents_h(~,evt)
         case{'MovingROI'}
         case{'ROIMoved'}
             app1.temp.mask = uint8(createMask(evt.Source));
-            if isempty(app1.mask_pos.Center)
+%             if isempty(app1.mask_pos.Center)
                 xy.Position = evt.Source.Position;
-            else
-                xy.Center = evt.Source.Center;
-                xy.SemiAxes = evt.Source.SemiAxes;
-                xy.RotationAngle = evt.Source.RotationAngle;
-            end
+%             else
+%                 xy.Center = evt.Source.Center;
+%                 xy.SemiAxes = evt.Source.SemiAxes;
+%                 xy.RotationAngle = evt.Source.RotationAngle;
+%             end
             app1.mask_pos = xy;
     end
 
