@@ -402,10 +402,10 @@ for i = 1:size(endout,2)-1
         path_exe = strcat(path_exe, '/' ,endout{1,i});
     end  
 end
-path_pdf = fullfile(path_exe, 'docs', 'TRACE4BUS__User_manual_en-it.pdf');
+path_pdf = fullfile(path_exe, 'docs', 'SWE-TRACE4BUSv2.0-D2_UserManual.pdf');
 system(['start "TRACE4BUS | User Manual" ','"', path_pdf,'"']);
 else
-system(['start "TRACE4BUS | User Manual" ','"', 'docs/TRACE4BUS__User_manual_en-it.pdf','"']);
+system(['start "TRACE4BUS | User Manual" ','"', 'docs/SWE-TRACE4BUSv2.0-D2_UserManual.pdf','"']);
 end
 
 
@@ -420,10 +420,10 @@ for i = 1:size(endout,2)-1
         path_exe = strcat(path_exe, '/' ,endout{1,i});
     end  
 end
-path_pdf = fullfile(path_exe, 'docs', 'TRACE4BUS__Technical_Sheet_en-it.pdf');
+path_pdf = fullfile(path_exe, 'docs', 'SWE-TRACE4BUSv2.0-D4_TechSheet.pdf');
 system(['start "TRACE4BUS | Technical Sheet" ','"', path_pdf,'"']);
 else
-system(['start "TRACE4BUS | Technical Sheet" ','"', 'docs/TRACE4BUS__Technical_Sheet_en-it.pdf','"']);
+system(['start "TRACE4BUS | Technical Sheet" ','"', 'docs/SWE-TRACE4BUSv2.0-D4_TechSheet.pdf','"']);
 end
 
 function UPSelected(src,event)
@@ -437,10 +437,10 @@ for i = 1:size(endout,2)-1
         path_exe = strcat(path_exe, '/' ,endout{1,i});
     end  
 end
-path_pdf = fullfile(path_exe, 'docs', 'TRACE4BUS__USI_protocol_en-it.pdf');
+path_pdf = fullfile(path_exe, 'docs', 'SWE-TRACE4BUSv2.0-D5_AcquisitionProtocol.pdf');
 system(['start "TRACE4BUS | USI protocol" ','"', path_pdf,'"']);
 else
-system(['start "TRACE4BUS | USI protocol" ','"', 'docs/TRACE4BUS__USI_protocol_en-it.pdf','"']);
+system(['start "TRACE4BUS | USI protocol" ','"', 'docs/SWE-TRACE4BUSv2.0-D5_AcquisitionProtocol.pdf','"']);
 end
 
 function SPSelected(src,event)
@@ -454,8 +454,8 @@ for i = 1:size(endout,2)-1
         path_exe = strcat(path_exe, '/' ,endout{1,i});
     end  
 end
-path_pdf = fullfile(path_exe, 'docs', 'TRACE4BUS__Segmentation_procedure_en-it.pdf');
+path_pdf = fullfile(path_exe, 'docs', 'SWE-TRACE4BUSv2.0-D6_SegmentationProcedure.pdf');
 system(['start "TRACE4BUS | Segmentation procedure" ','"', path_pdf,'"']);
 else
-system(['start "TRACE4BUS | Segmentation procedure" ','"', 'docs/TRACE4BUS__Segmentation_procedure_en-it.pdf','"']);
+system(['start "TRACE4BUS | Segmentation procedure" ','"', 'docs/SWE-TRACE4BUSv2.0-D6_SegmentationProcedure.pdf','"']);
 end
