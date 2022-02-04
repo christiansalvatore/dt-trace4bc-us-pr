@@ -1,0 +1,47 @@
+<head>
+    <style>
+        div {
+            display: flex;
+            flex-direction: row;
+        }
+
+        input {
+            font-family: Helvetica;
+            font-size: 12px;
+            flex-grow: 2;
+            width: 10px;
+            height: 100%;
+            text-align: center; 
+            padding-left: 4px;
+            padding-right: 4px;
+        }
+    </style>
+   <script type="text/javascript">
+
+        function setup(htmlComponent) {
+
+            var PID = document.getElementById("PID");
+
+            function dataChanged(event) {
+                PID.value = htmlComponent.Data;
+            }
+
+            function valueChanged(event) {
+                htmlComponent.Data = PID.value;
+            }
+
+            htmlComponent.addEventListener("DataChanged", dataChanged);
+
+            PID.addEventListener("change", valueChanged);
+
+            dataChanged();
+            valueChanged();
+        }
+    </script>
+</head>
+
+<body>
+    <div>
+        <input id="PID" type="text" placeholder="0000000" maxlength="7" minlength="3">
+    </div>
+</body>

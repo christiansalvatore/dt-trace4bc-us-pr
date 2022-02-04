@@ -1,0 +1,45 @@
+<head>
+    <style>
+        div {
+            display: flex;
+            flex-direction: row;
+        }
+
+        input {
+            font-family: Helvetica;
+            font-size: 12px;
+            flex-grow: 2;
+            width: 10px;
+            height: 100%;
+            text-align: center; 
+        }
+    </style>
+      <script type="text/javascript">
+
+        function setup(htmlComponent) {
+
+            var VID = document.getElementById("VID");
+
+            function dataChanged(event) {
+                VID.value = htmlComponent.Data;
+            }
+
+            function valueChanged(event) {
+                htmlComponent.Data = VID.value;
+            }
+
+            htmlComponent.addEventListener("DataChanged", dataChanged);
+
+            VID.addEventListener("change", valueChanged);
+
+            dataChanged();
+            valueChanged();
+        }
+    </script>
+</head>
+
+<body>
+    <div>
+        <input id="VID" type="number" placeholder="00" maxlength="2" minlength="2">
+    </div>
+</body>
