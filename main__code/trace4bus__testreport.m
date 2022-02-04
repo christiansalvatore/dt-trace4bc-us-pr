@@ -74,7 +74,7 @@ if contains(out_risk,'BI-RADS 2')
     title = Heading(1,LinkTarget('mg'));
     append(title,"US native image of the breast mass");
 
-        title.Style = {HAlign('left'), Italic, FontFamily('Raleway'), FontSize('12')};
+        title.Style = {HAlign('center'), Italic, FontFamily('Raleway'), FontSize('12')};
         add(rpt,title);
 
         images{1} = Image(strcat(path_save,'volumes\image_nomask.png'));
