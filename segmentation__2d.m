@@ -204,11 +204,10 @@ if ~isempty(app1.temp.mask)
         stats = regionprops(cc,'MinorAxisLength');
 %         [row,col] = ind2sub(size(app1.temp.mask),cc.PixelIdxList{1,1});
 %         min_range = min(max(row)-min(row)+1,max(col)-min(col)+1);
-        if stats.MinorAxisLength < 10
+        if isempty(stats) || stats.MinorAxisLength < 10
             msgbox(sprintf('Region of interest too small along at least one of the two axes.\n\nPlease, enlarge.'),'Warning','warn');
             app1.h.InteractionsAllowed = 'all';
         else
-            
             c = [];
 
             if ~isempty(c)
