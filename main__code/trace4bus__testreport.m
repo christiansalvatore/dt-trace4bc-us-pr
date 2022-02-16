@@ -163,7 +163,9 @@ end
         add(rpt,prg);
     end
 
+prg = Paragraph('BI-RADS predictors shown as additional output of the analysis (in addition to the BI-RADS category of the breast mass), i.e., maximum length, area, shape, and orientation, refer to the contour manually drawn by the end-user. These predictors may include tissues external to the suspicious mass, in particular when acoustic shadow or perilesional reactive phenomena are present near the breast mass.');
 
+add(rpt,prg);
 
 % Add blank line
     blankline(rpt,1);
